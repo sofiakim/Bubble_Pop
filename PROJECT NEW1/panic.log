@@ -1,0 +1,1023 @@
+*** FATAL INTERNAL ERROR in "Ready" ***
+Date: Jun 9 2012 5:40 PM
+
+File Name: C:\Program Files (x86)\Ready to Program\Ready.exe
+Version: 1.7  [11]
+File Size: 2904103
+File Date: Oct 2 2003 4:13 PM
+Operating System: After Windows XP
+JVM: Ready Built-in JRE (1.4.2 or later)
+"assert" Statements: disabled
+
+
+Previous Operations:
+  CMD: COMMAND_SAVE_FILE
+    Save File (1) - Window: 504fc - SaveAs: 0 - Sel: 0 - fileno: 0 - sizeptr: 0
+    Save File (2) - name: C:\Users\hma\Desktop\Jessie's Projects\PROJECT\BubblePopBoard.java - fileno: 0 - sizeptr: 0
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 729008 - L: 91 - C: 45
+    Text - sz:116:4305 - slFr:77:60:2921 - slTo:77:60:2921 - nlA:0
+    Line Starts: 113:4226 114:4259 115:4280 116:4305
+    Set Selection (2) - sz:116:4305 - slFr:3446 - slTo:3446 - nlA:0
+    Line Starts: 113:4226 114:4259 115:4280 116:4305
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 729008 - L: 91 - C: 45 (x1)
+    Text - sz:116:4305 - slFr:91:45:3446 - slTo:91:45:3446 - nlA:0
+    Line Starts: 113:4226 114:4259 115:4280 116:4305
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_RUN
+    Run (1) - Window: 5049c - Ex: 1 - Args: 0 - Step: 0
+    Recompile BubblePopBoard.java - BubblePopBoard.java newer than BubblePopBoard.class
+    Jikes compiling BubblePopMain
+    Jikes compiling BubblePopBoard
+    Command to Java Supervisor - "-java "C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\client\jvm.dll" -cp ".;C:\Program Files (x86)\Ready to Program\Support\Ready Classes;C:\Program Files (x86)\Ready to Program\Support\Classes;C:\Program Files (x86)\Ready to Program\Support\Ready Classes\tools.jar;C:\Program Files (x86)\Ready to Program\Support\Classes\robot.jar;" -class BubblePopMain -props F 25 80 10 "Courier New" 2 F 0 F 8 8 0 F T"
+    JavaSup: JVM Option: "-Djava.class.path=.;C:\Program Files (x86)\Ready to Program\Support\Ready Classes;C:\Program Files (x86)\Ready to Program\Support\Classes;C:\Program Files (x86)\Ready to Program\Support\Ready Classes\tools.jar;C:\Program Files (x86)\Ready to Program\Support\Classes\robot.jar;"
+    JavaSup: JVM Option: "-Djava.library.path=C:\Program Files (x86)\Ready to Program\Support\Bin"
+    JavaSup: JVM Option: "-enableassertions"
+    JavaSup: JVM Option: "-Xdebug"
+    JavaSup: JVM Option: "-Xrunjdwp:transport=dt_shmem,address=readyshmem,server=y,suspend=n"
+    JavaSup: -pipe 292 308 212 3474816
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 7339f90 - L: 200 - C: 69
+    Text - sz:556:16411 - slFr:175:5:5508 - slTo:175:5:5508 - nlA:0
+    Line Starts: 553:16407 554:16409 555:16410 556:16411
+    Set Selection (2) - sz:556:16411 - slFr:6401 - slTo:6401 - nlA:0
+    Line Starts: 553:16407 554:16409 555:16410 556:16411
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 7339f90 - L: 200 - C: 69 (x1)
+    Text - sz:556:16411 - slFr:200:40:6401 - slTo:200:40:6401 - nlA:0
+    Line Starts: 553:16407 554:16409 555:16410 556:16411
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_REDO
+    Undo (1) - Text: 7339f90 - Undo: 0
+    Text - sz:556:16411 - slFr:6401 - slTo:6401 - nlA:0
+    Line Starts: 553:16407 554:16409 555:16410 556:16411
+    Undo (2) - Undo size: 0 - Repl from: 5693 - Repl to: 5744
+    Delete Selection (1) - Text: 7339f90
+    Text - sz:556:16411 - slFr:5693 - slTo:5744 - nlA:0
+    Line Starts: 553:16407 554:16409 555:16410 556:16411
+    Delete Selection (2) - From line: 182 - From col: 11 - To line: 183 - To col: 15
+    Delete Selection (3) - sz:555:16360 - slFr:5693 - slTo:5693 - nlA:0
+    Line Starts: 552:16356 553:16358 554:16359 555:16360
+    Undo (3) - sz:555:16360 - slFr:5696 - slTo:5696 - nlA:0
+    Line Starts: 552:16356 553:16358 554:16359 555:16360
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_REDO
+    Undo (1) - Text: 7339f90 - Undo: 0
+    Text - sz:555:16360 - slFr:182:14:5696 - slTo:182:14:5696 - nlA:0
+    Line Starts: 552:16356 553:16358 554:16359 555:16360
+    Undo (2) - Undo size: 2 - Repl from: 5696 - Repl to: 5696
+    Insert Text (1) - Text: 7339f90 - size: 2 - clean: 1
+    Text - sz:555:16360 - slFr:182:14:5696 - slTo:182:14:5696 - nlA:0
+    Line Starts: 552:16356 553:16358 554:16359 555:16360
+    Insert Text (2) - numNewLines: 0
+    Insert Text (3) - sz:555:16362 - slFr:5698 - slTo:5698 - nlA:0
+    Line Starts: 552:16358 553:16360 554:16361 555:16362
+    Undo (3) - sz:555:16362 - slFr:5766 - slTo:5766 - nlA:0
+    Line Starts: 552:16358 553:16360 554:16361 555:16362
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_REDO
+    Undo (1) - Text: 7339f90 - Undo: 0
+    Text - sz:555:16362 - slFr:185:3:5766 - slTo:185:3:5766 - nlA:0
+    Line Starts: 552:16358 553:16360 554:16361 555:16362
+    Undo (2) - Undo size: 2 - Repl from: 5766 - Repl to: 5766
+    Insert Text (1) - Text: 7339f90 - size: 2 - clean: 1
+    Text - sz:555:16362 - slFr:185:3:5766 - slTo:185:3:5766 - nlA:0
+    Line Starts: 552:16358 553:16360 554:16361 555:16362
+    Insert Text (2) - numNewLines: 0
+    Insert Text (3) - sz:555:16364 - slFr:5768 - slTo:5768 - nlA:0
+    Line Starts: 552:16360 553:16362 554:16363 555:16364
+    Undo (3) - sz:555:16364 - slFr:6525 - slTo:6525 - nlA:0
+    Line Starts: 552:16360 553:16362 554:16363 555:16364
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_REDO
+    Undo (1) - Text: 7339f90 - Undo: 0
+    Text - sz:555:16364 - slFr:211:25:6525 - slTo:211:25:6525 - nlA:0
+    Line Starts: 552:16360 553:16362 554:16363 555:16364
+    Undo (2) - Undo size: 2 - Repl from: 6525 - Repl to: 6525
+    Insert Text (1) - Text: 7339f90 - size: 2 - clean: 1
+    Text - sz:555:16364 - slFr:211:25:6525 - slTo:211:25:6525 - nlA:0
+    Line Starts: 552:16360 553:16362 554:16363 555:16364
+    Insert Text (2) - numNewLines: 0
+    Insert Text (3) - sz:555:16366 - slFr:6527 - slTo:6527 - nlA:0
+    Line Starts: 552:16362 553:16364 554:16365 555:16366
+    Undo (3) - sz:555:16366 - slFr:6412 - slTo:6412 - nlA:0
+    Line Starts: 552:16362 553:16364 554:16365 555:16366
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_REDO
+    Undo (1) - Text: 7339f90 - Undo: 0
+    Text - sz:555:16366 - slFr:205:20:6412 - slTo:205:20:6412 - nlA:0
+    Line Starts: 552:16362 553:16364 554:16365 555:16366
+    Undo (2) - Undo size: 13 - Repl from: 6412 - Repl to: 6412
+    Insert Text (1) - Text: 7339f90 - size: 13 - clean: 1
+    Text - sz:555:16366 - slFr:205:20:6412 - slTo:205:20:6412 - nlA:0
+    Line Starts: 552:16362 553:16364 554:16365 555:16366
+    Insert Text (2) - numNewLines: 1
+    Insert Text (3) - sz:556:16379 - slFr:6425 - slTo:6425 - nlA:0
+    Line Starts: 553:16375 554:16377 555:16378 556:16379
+    Undo (3) - sz:556:16379 - slFr:6425 - slTo:6425 - nlA:0
+    Line Starts: 553:16375 554:16377 555:16378 556:16379
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_REDO
+    Undo (1) - Text: 7339f90 - Undo: 0
+    Text - sz:556:16379 - slFr:206:12:6425 - slTo:206:12:6425 - nlA:0
+    Line Starts: 553:16375 554:16377 555:16378 556:16379
+    Undo (2) - Undo size: 51 - Repl from: 6425 - Repl to: 6425
+    Insert Text (1) - Text: 7339f90 - size: 51 - clean: 1
+    Text - sz:556:16379 - slFr:206:12:6425 - slTo:206:12:6425 - nlA:0
+    Line Starts: 553:16375 554:16377 555:16378 556:16379
+    Insert Text (2) - numNewLines: 1
+    Insert Text (3) - sz:557:16430 - slFr:6476 - slTo:6476 - nlA:0
+    Line Starts: 554:16426 555:16428 556:16429 557:16430
+    Undo (3) - sz:557:16430 - slFr:6476 - slTo:6476 - nlA:0
+    Line Starts: 554:16426 555:16428 556:16429 557:16430
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_REDO
+    Undo (1) - Text: 7339f90 - Undo: 0
+    Text - sz:557:16430 - slFr:207:26:6476 - slTo:207:26:6476 - nlA:0
+    Line Starts: 554:16426 555:16428 556:16429 557:16430
+    Undo (2) - Undo size: 16507 - Repl from: 0 - Repl to: 16572
+    Delete Selection (1) - Text: 7339f90
+    Text - sz:557:16430 - slFr:207:26:0 - slTo:207:26:16572 - nlA:0
+    Line Starts: 554:16426 555:16428 556:16429 557:16430
+    Delete Selection (2) - From line: 207 - From col: 26 - To line: 207 - To col: 26
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_REDO
+    Undo (1) - Text: 7339f90 - Undo: 0
+    Text - sz:557:16430 - slFr:207:26:0 - slTo:207:26:16572 - nlA:0
+    Line Starts: 554:16426 555:16428 556:16429 557:16430
+    Undo (2) - Undo size: 2 - Repl from: 12851 - Repl to: 12853
+    Delete Selection (1) - Text: 7339f90
+    Text - sz:557:16430 - slFr:207:26:12851 - slTo:207:26:12853 - nlA:0
+    Line Starts: 554:16426 555:16428 556:16429 557:16430
+    Delete Selection (2) - From line: 207 - From col: 26 - To line: 207 - To col: 26
+    Delete Selection (3) - sz:555:16428 - slFr:12851 - slTo:12851 - nlA:0
+    Line Starts: 552:16424 553:16426 554:16427 555:16428
+
+
+
+The environment has experienced an unexpected internal error.
+
+This error is caused by a bug in the environment and is not your fault!
+Details about the crash have been saved in the file "C:\Users\hma\Desktop\Jessie's Projects\PROJECT\panic.log".
+
+If possible, please e-mail this file to readybugs@hsa.on.ca
+
+Here are some details about the error:
+   Error = Line Database Verify Failed (2)
+Num lines: 555 - Size: 16428 - Other - 1 - 0
+---
+--- (6035)
+   File = src\edtext.c
+   Line = 6160
+
+All unsaved open files will be saved with a ".sav" or ".sv#" extension.
+
+List of Modules: 
+    C:\Program Files (x86)\Ready to Program\Ready.exe
+    C:\Windows\SysWOW64\ntdll.dll
+    C:\Windows\syswow64\kernel32.dll
+    C:\Windows\syswow64\KERNELBASE.dll
+    C:\Windows\syswow64\USER32.dll
+    C:\Windows\syswow64\GDI32.dll
+    C:\Windows\syswow64\LPK.dll
+    C:\Windows\syswow64\USP10.dll
+    C:\Windows\syswow64\msvcrt.dll
+    C:\Windows\syswow64\ADVAPI32.dll
+    C:\Windows\SysWOW64\sechost.dll
+    C:\Windows\syswow64\RPCRT4.dll
+    C:\Windows\syswow64\SspiCli.dll
+    C:\Windows\syswow64\CRYPTBASE.dll
+    C:\Windows\syswow64\comdlg32.dll
+    C:\Windows\syswow64\SHLWAPI.dll
+    C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16661_none_ebfb56996c72aefc\COMCTL32.dll
+    C:\Windows\syswow64\SHELL32.dll
+    C:\Windows\system32\VERSION.dll
+    C:\Windows\system32\WINMM.dll
+    C:\Windows\system32\IMM32.DLL
+    C:\Windows\syswow64\MSCTF.dll
+    C:\Windows\system32\uxtheme.dll
+    c:\PROGRA~2\mcafee\SITEAD~1\saHook.dll
+    C:\Windows\syswow64\ole32.dll
+    C:\Windows\syswow64\OLEAUT32.dll
+    C:\Program Files (x86)\Ready to Program\Support\Bin\edjdll.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\client\jvm.dll
+    C:\Windows\system32\apphelp.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\hpi.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\verify.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\java.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\zip.dll
+    C:\Windows\syswow64\CLBCatQ.DLL
+    C:\Windows\system32\dwmapi.dll
+    C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16661_none_420fe3fa2b8113bd\comctl32.DLL
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\dt_shmem.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\net.dll
+    C:\Windows\syswow64\WS2_32.dll
+    C:\Windows\syswow64\NSI.dll
+    C:\Windows\system32\NLAapi.dll
+    C:\Windows\System32\mswsock.dll
+    C:\Windows\system32\DNSAPI.dll
+    C:\Windows\System32\winrnr.dll
+    C:\Windows\system32\napinsp.dll
+    C:\Windows\system32\pnrpnsp.dll
+    C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live\WLIDNSP.DLL
+    C:\Windows\syswow64\PSAPI.DLL
+    C:\Program Files (x86)\Bonjour\mdnsNSP.dll
+    C:\Windows\system32\Iphlpapi.DLL
+    C:\Windows\system32\WINNSI.DLL
+    C:\Windows\System32\fwpuclnt.dll
+    C:\Windows\system32\rasadhlp.dll
+    C:\Windows\syswow64\SETUPAPI.dll
+    C:\Windows\syswow64\CFGMGR32.dll
+    C:\Windows\syswow64\DEVOBJ.dll
+    C:\Windows\system32\propsys.dll
+    C:\Windows\system32\ntmarta.dll
+    C:\Windows\syswow64\WLDAP32.dll
+    C:\Program Files (x86)\Common Files\microsoft shared\ink\tiptsf.dll
+    C:\Windows\system32\NetworkExplorer.dll
+    C:\Windows\system32\WindowsCodecs.dll
+    C:\Windows\system32\EhStorShell.dll
+    C:\PROGRA~2\MICROS~3\Office12\GR469A~1.DLL
+    C:\PROGRA~2\MICROS~3\Office12\GrooveUtil.DLL
+    C:\Windows\syswow64\WININET.dll
+    C:\Windows\syswow64\Normaliz.dll
+    C:\Windows\syswow64\iertutil.dll
+    C:\Windows\syswow64\urlmon.dll
+    C:\Windows\syswow64\CRYPT32.dll
+    C:\Windows\syswow64\MSASN1.dll
+    C:\Windows\WinSxS\x86_microsoft.vc80.crt_1fc8b3b9a1e18e3b_8.0.50727.6195_none_d09154e044272b9a\MSVCR80.dll
+    C:\PROGRA~2\MICROS~3\Office12\GrooveNew.DLL
+    C:\Windows\WinSxS\x86_microsoft.vc80.atl_1fc8b3b9a1e18e3b_8.0.50727.4053_none_d1c738ec43578ea1\ATL80.DLL
+    C:\Windows\system32\CRYPTSP.dll
+    C:\Windows\system32\rsaenh.dll
+    C:\Windows\system32\MSImg32.dll
+    C:\Windows\system32\ntshrui.dll
+    C:\Windows\system32\srvcli.dll
+    C:\Windows\system32\cscapi.dll
+    C:\Windows\system32\slc.dll
+    C:\Windows\system32\profapi.dll
+    C:\Windows\system32\RpcRtRemote.dll
+    C:\Windows\System32\StructuredQuery.dll
+    C:\Windows\System32\Secur32.dll
+    C:\Windows\SysWOW64\actxprxy.dll
+    C:\Program Files (x86)\Internet Explorer\ieproxy.dll
+    C:\Windows\SysWOW64\thumbcache.dll
+    C:\Windows\system32\SHDOCVW.dll
+    C:\Windows\system32\ieframe.DLL
+    C:\Windows\system32\OLEACC.dll
+    C:\Windows\system32\SearchFolder.dll
+    C:\PROGRA~2\MICROS~3\Office12\GRA32A~1.DLL
+    C:\Windows\System32\msxml3.dll
+    C:\Windows\system32\dbghelp.dll
+
+  0 .V PC=0023:778df861 Ret=75b21184 Frame=0018b4f4 Stack=0018b488
+    Parameters (0x00000c9c 0x00003a98 0x00000000 0x0018b530)
+    Unknown module, NtWaitForSingleObject() + 0021 byte(s)
+  1 .V PC=0023:75b21184 Ret=75b21138 Frame=0018b50c Stack=0018b4fc
+    Parameters (0x00000c9c 0x00003a98 0x00000000 0x0018ddc8)
+    Unknown module, WaitForSingleObjectEx() + 0067 byte(s)
+  2 .V PC=0023:75b21138 Ret=00416265 Frame=0018b520 Stack=0018b514
+    Parameters (0x00000c9c 0x00003a98 0x0018de80 0x00408985)
+    Unknown module, WaitForSingleObject() + 0018 byte(s)
+  3 .V PC=0023:00416265 Ret=004156d8 Frame=0018ddc8 Stack=0018b528
+    Parameters (0x00000001 0x00001793 0x005fd72c 0x00001810)
+    src\edfail.c, MyFailErrorBox (), Line 0987+0020 byte(s)
+  4 .V PC=0023:004156d8 Ret=0044439c Frame=0018ddf0 Stack=0018ddd0
+    Parameters (0x00001793 0x005fd72c 0x00001810 0x00000000)
+    src\edfail.c, EdFail_Fatal (), Line 0494+0027 byte(s)
+  5 .V PC=0023:0044439c Ret=0043efcf Frame=0018de3c Stack=0018ddf8
+    Parameters (0x07339f90 0x0018e2f8 0x00003235 0x00003233)
+    src\edtext.c, MyVerifyLineDB (), Line 6162+0048 byte(s)
+  6 .V PC=0023:0043efcf Ret=0043fb23 Frame=0018de80 Stack=0018de44
+    Parameters (0x07339f90 0x0701ba00 0x071cd228 0x00001634)
+    src\edtext.c, EdText_SelectionDelete (), Line 2499+0009 byte(s)
+  7 .V PC=0023:0043fb23 Ret=0040d20a Frame=0018dea8 Stack=0018de88
+    Parameters (0x07339f90 0x00000000 0x07339f90 0x00001af5)
+    src\edtext.c, EdText_Undo (), Line 2993+0009 byte(s)
+  8 .V PC=0023:0040d20a Ret=0040aa6c Frame=0018dec0 Stack=0018deb0
+    Parameters (0x000504fc 0x00000000 0x0018e358 0x00408985)
+    src\eddisp.c, MyEditUndo (), Line 4829+0013 byte(s)
+  9 .V PC=0023:0040aa6c Ret=00409061 Frame=0018e2f8 Stack=0018dec8
+    Parameters (0x000504fc 0x0000044e 0x00000000 0x00408985)
+    src\eddisp.c, MyCommandHandler (), Line 3043+0011 byte(s)
+ 10 .V PC=0023:00409061 Ret=004089e0 Frame=0018e358 Stack=0018e300
+    Parameters (0x000504fc 0x00000111 0x0001044e 0x00000001)
+    src\eddisp.c, MyCommonMessageHandler (), Line 3487+0019 byte(s)
+ 11 .V PC=0023:004089e0 Ret=759b6238 Frame=0018e380 Stack=0018e360
+    Parameters (0x000504fc 0x00000111 0x0001044e 0x00000001)
+    src\eddisp.c, MyTextDisplayWindowProcedure (), Line 1962+0025 byte(s)
+ 12 .V PC=0023:759b6238 Ret=759b68ea Frame=0018e3ac Stack=0018e388
+    Parameters (0x00408985 0x000504fc 0x00000111 0x0001044e)
+    Unknown module, gapfnScSendMessage() + 0624 byte(s)
+ 13 .V PC=0023:759b68ea Ret=759bcd1a Frame=0018e424 Stack=0018e3b4
+    Parameters (0x00000000 0x00408985 0x000504fc 0x00000111)
+    Unknown module, gapfnScSendMessage() + 2338 byte(s)
+ 14 .V PC=0023:759bcd1a Ret=759def40 Frame=0018e468 Stack=0018e42c
+    Parameters (0x00cb5d90 0x00000000 0x00408985 0x0001044e)
+    Unknown module, GetWindow() + 0538 byte(s)
+ 15 .V PC=0023:759def40 Ret=00447d4e Frame=0018e48c Stack=0018e470
+    Parameters (0x000504fc 0x00000111 0x0001044e 0x00000001)
+    Unknown module, SendMessageA() + 0076 byte(s)
+ 16 .V PC=0023:00447d4e Ret=759b6238 Frame=0018e4c4 Stack=0018e494
+    Parameters (0x00070442 0x00000111 0x0001044e 0x00000000)
+    src\edwin.c, MyEditorWindowProcedure (), Line 1165+0032 byte(s)
+ 17 .V PC=0023:759b6238 Ret=759b68ea Frame=0018e4f0 Stack=0018e4cc
+    Parameters (0x00447af5 0x00070442 0x00000111 0x0001044e)
+    Unknown module, gapfnScSendMessage() + 0624 byte(s)
+ 18 .V PC=0023:759b68ea Ret=759b7177 Frame=0018e568 Stack=0018e4f8
+    Parameters (0x00000000 0x00447af5 0x00070442 0x00000111)
+    Unknown module, gapfnScSendMessage() + 2338 byte(s)
+ 19 .V PC=0023:759b7177 Ret=759b72f1 Frame=0018e5c4 Stack=0018e570
+    Parameters (0x00cad1c0 0x00000000 0x00000111 0x0001044e)
+    Unknown module, GetWindowLongW() + 0394 byte(s)
+ 20 .V PC=0023:759b72f1 Ret=778d00e6 Frame=0018e600 Stack=0018e5cc
+    Parameters (0x0018e618 0x00000000 0x0018ff78 0x778d0070)
+    Unknown module, GetDC() + 0171 byte(s)
+ 21 .V PC=0023:778d00e6 Ret=00403146 Frame=0018e658 Stack=0018e608
+    Parameters (0x00070442 0x018d0379 0x0018e680 0x0018e67c)
+    Unknown module, KiUserCallbackDispatcher() + 0046 byte(s)
+ 22 .V PC=0023:00403146 Ret=00403102 Frame=0018e670 Stack=0018e660
+    Parameters (0x0018e680 0x0018e6a8 0x000504fc 0x00000100)
+    src\ed.c, MyProcessMessage (), Line 1828+0041 byte(s)
+ 23 .V PC=0023:00403102 Ret=0040170f Frame=0018e6a0 Stack=0018e678
+    Parameters (0x00000000 0x00000000 0xcccccccc 0xcccccccc)
+    src\ed.c, MyProcessEvents (), Line 1804+0009 byte(s)
+ 24 .V PC=0023:0040170f Ret=0052bc96 Frame=0018fef8 Stack=0018e6a8
+    Parameters (0x00400000 0x00000000 0x00832f7c 0x00000001)
+    src\ed.c, WinMain (), Line 0470+0005 byte(s)
+ 25 .V PC=0023:0052bc96 Ret=75b23677 Frame=0018ff88 Stack=0018ff00
+    Parameters (0x7efde000 0x0018ffd4 0x778f9f42 0x7efde000)
+    crt0.c, WinMainCRTStartup (), Line 0198+0054 byte(s)
+ 26 .V PC=0023:75b23677 Ret=778f9f42 Frame=0018ff94 Stack=0018ff90
+    Parameters (0x7efde000 0x72aa7d82 0x00000000 0x00000000)
+    Unknown module, BaseThreadInitThunk() + 0018 byte(s)
+ 27 .V PC=0023:778f9f42 Ret=778f9f15 Frame=0018ffd4 Stack=0018ff9c
+    Parameters (0x0052bb70 0x7efde000 0x00000000 0x00000000)
+    Unknown module, RtlInitializeExceptionChain() + 0099 byte(s)
+ 28 .V PC=0023:778f9f15 Ret=00000000 Frame=0018ffec Stack=0018ffdc
+    Parameters (0x0052bb70 0x7efde000 0x00000000 0x78746341)
+    Unknown module, RtlInitializeExceptionChain() + 0054 byte(s)
+
+
+------------------------------------------------------
+*** ENVIRONMENT CRASH ***
+
+Date: Jun 9 2012 7:08 PM
+
+File Name: C:\Program Files (x86)\Ready to Program\Ready.exe
+Version: 1.7  [11]
+File Size: 2904103
+File Date: Oct 2 2003 4:13 PM
+Operating System: After Windows XP
+JVM: Ready Built-in JRE (1.4.2 or later)
+"assert" Statements: disabled
+
+
+Cause of Crash: Access Violation
+
+Previous Operations:
+    Extend Selection - Text: 75e2fe0 - L: 161 - C: 66 (x1)
+    Text - sz:570:17094 - slFr:5097 - slTo:5097 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_SAVE_FILE
+    Save File (1) - Window: 10990 - SaveAs: 0 - Sel: 0 - fileno: 0 - sizeptr: 0
+    Save File (2) - name: C:\Users\hma\Desktop\Jessie's Projects\PROJECT\BubblePopBoard.java - fileno: 0 - sizeptr: 0
+  CMD: WM_INITMENU (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 2047d48 - L: 14 - C: 60
+    Text - sz:130:4851 - slFr:26:0:801 - slTo:26:0:801 - nlA:0
+    Line Starts: 127:4772 128:4805 129:4826 130:4851
+    Set Selection (2) - sz:130:4851 - slFr:472 - slTo:472 - nlA:0
+    Line Starts: 127:4772 128:4805 129:4826 130:4851
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 2047d48 - L: 14 - C: 60 (x1)
+    Text - sz:130:4851 - slFr:14:33:472 - slTo:14:33:472 - nlA:0
+    Line Starts: 127:4772 128:4805 129:4826 130:4851
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 75e2fe0 - L: 15 - C: 70
+    Text - sz:570:17094 - slFr:161:0:5097 - slTo:161:0:5097 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+    Set Selection (2) - sz:570:17094 - slFr:840 - slTo:840 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 75e2fe0 - L: 15 - C: 70 (x1)
+    Text - sz:570:17094 - slFr:15:30:840 - slTo:15:30:840 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 75e2fe0 - L: 13 - C: 76
+    Text - sz:570:17094 - slFr:840 - slTo:840 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+    Set Selection (2) - sz:570:17094 - slFr:729 - slTo:729 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 75e2fe0 - L: 13 - C: 76 (x1)
+    Text - sz:570:17094 - slFr:13:1:729 - slTo:13:1:729 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 75e2fe0 - L: 23 - C: 82
+    Text - sz:570:17094 - slFr:13:1:729 - slTo:13:1:729 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+    Set Selection (2) - sz:570:17094 - slFr:1100 - slTo:1100 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 75e2fe0 - L: 23 - C: 82 (x1)
+    Text - sz:570:17094 - slFr:23:34:1100 - slTo:23:34:1100 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 75e2fe0 - L: 12 - C: 65
+    Text - sz:570:17094 - slFr:23:34:1100 - slTo:23:34:1100 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+    Set Selection (2) - sz:570:17094 - slFr:727 - slTo:727 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 75e2fe0 - L: 12 - C: 65 (x1)
+    Text - sz:570:17094 - slFr:12:15:727 - slTo:12:15:727 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 75e2fe0 - L: 13 - C: 65
+    Text - sz:570:17094 - slFr:727 - slTo:727 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+    Set Selection (2) - sz:570:17094 - slFr:729 - slTo:729 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 75e2fe0 - L: 13 - C: 65 (x1)
+    Text - sz:570:17094 - slFr:13:1:729 - slTo:13:1:729 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+  CMD: WM_CHAR [#13] (D)
+    Keystroke - Text: 75e2fe0 - ch: 13
+    Text - sz:570:17094 - slFr:729 - slTo:729 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+    Keystroke (2) - sz:571:17095 - slFr:730 - slTo:730 - nlA:0
+    Line Starts: 568:17091 569:17093 570:17094 571:17095
+  CMD: WM_CHAR [#9] (D)
+    Keystroke - Text: 75e2fe0 - ch: 9
+    Text - sz:571:17095 - slFr:14:0:730 - slTo:14:0:730 - nlA:0
+    Line Starts: 568:17091 569:17093 570:17094 571:17095
+    Keystroke (2) - sz:571:17099 - slFr:734 - slTo:734 - nlA:0
+    Line Starts: 568:17095 569:17097 570:17098 571:17099
+  CMD: WM_CHAR [s] (D) (x27) [private BubblePopAudio sons]
+    Keystroke - Text: 75e2fe0 - ch: 115
+    Text - sz:571:17125 - slFr:14:30:760 - slTo:14:30:760 - nlA:0
+    Line Starts: 568:17121 569:17123 570:17124 571:17125
+    Keystroke (2) - sz:571:17126 - slFr:761 - slTo:761 - nlA:0
+    Line Starts: 568:17122 569:17124 570:17125 571:17126
+  CMD: WM_CHAR [#8] (D)
+    Keystroke - Text: 75e2fe0 - ch: 8
+    Text - sz:571:17126 - slFr:14:31:761 - slTo:14:31:761 - nlA:0
+    Line Starts: 568:17122 569:17124 570:17125 571:17126
+    Keystroke (2) - sz:571:17125 - slFr:760 - slTo:760 - nlA:0
+    Line Starts: 568:17121 569:17123 570:17124 571:17125
+  CMD: WM_CHAR [;] (D) (x3) [gs;]
+    Keystroke - Text: 75e2fe0 - ch: 59
+    Text - sz:571:17127 - slFr:14:32:762 - slTo:14:32:762 - nlA:0
+    Line Starts: 568:17123 569:17125 570:17126 571:17127
+    Keystroke (2) - sz:571:17128 - slFr:763 - slTo:763 - nlA:0
+    Line Starts: 568:17124 569:17126 570:17127 571:17128
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 2047d48 - L: 71 - C: 7
+    Text - sz:130:4851 - slFr:14:33:472 - slTo:14:33:472 - nlA:0
+    Line Starts: 127:4772 128:4805 129:4826 130:4851
+    Set Selection (2) - sz:130:4851 - slFr:2709 - slTo:2709 - nlA:0
+    Line Starts: 127:4772 128:4805 129:4826 130:4851
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 2047d48 - L: 71 - C: 7 (x1)
+    Text - sz:130:4851 - slFr:71:7:2709 - slTo:71:7:2709 - nlA:0
+    Line Starts: 127:4772 128:4805 129:4826 130:4851
+  CMD: WM_CHAR [/] (D) (x2) [//]
+    Keystroke - Text: 2047d48 - ch: 47
+    Text - sz:130:4852 - slFr:71:8:2710 - slTo:71:8:2710 - nlA:0
+    Line Starts: 127:4773 128:4806 129:4827 130:4852
+    Keystroke (2) - sz:130:4853 - slFr:2711 - slTo:2711 - nlA:0
+    Line Starts: 127:4774 128:4807 129:4828 130:4853
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_RUN
+    Run (1) - Window: 11400cc - Ex: 1 - Args: 0 - Step: 0
+    Recompile BubblePopBoard.java - BubblePopBoard.java newer than BubblePopBoard.class
+    Recompile BubblePopAudio.java - BubblePopAudio.java newer than BubblePopAudio.class
+    Jikes compiling BubblePopMain
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 2047d48 - L: 56 - C: 34
+    Text - sz:130:4853 - slFr:71:9:2711 - slTo:71:9:2711 - nlA:0
+    Line Starts: 127:4774 128:4807 129:4828 130:4853
+    Set Selection (2) - sz:130:4853 - slFr:2179 - slTo:2179 - nlA:0
+    Line Starts: 127:4774 128:4807 129:4828 130:4853
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 2047d48 - L: 56 - C: 34 (x1)
+    Text - sz:130:4853 - slFr:56:34:2179 - slTo:56:34:2179 - nlA:0
+    Line Starts: 127:4774 128:4807 129:4828 130:4853
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_SAVE_FILE
+    Save File (1) - Window: 11400cc - SaveAs: 0 - Sel: 0 - fileno: 0 - sizeptr: 0
+    Save File (2) - name: C:\Users\hma\Desktop\Jessie's Projects\PROJECT\BubblePopMain.java - fileno: 0 - sizeptr: 0
+  CMD: WM_SETFOCUS (W)
+  CMD: COMMAND_RUN
+    Run (1) - Window: 11400cc - Ex: 1 - Args: 0 - Step: 0
+    Recompile BubblePopBoard.java - BubblePopBoard.java newer than BubblePopBoard.class
+    Recompile BubblePopAudio.java - BubblePopAudio.java newer than BubblePopAudio.class
+    Jikes compiling BubblePopMain
+
+
+Registers
+  EAX=0000000C  EBX=00000000  ECX=00000000  EDX=00000002  ESI=00189B6C
+  EDI=00189B48  EBP=00189AF0  ESP=00189AEC  EIP=00469BD3  FLG=00010246
+  CS=0023  DS=002B  SS=002B  ES=002B  FS=0053  GS=002B
+
+List of Modules: 
+    C:\Program Files (x86)\Ready to Program\Ready.exe
+    C:\Windows\SysWOW64\ntdll.dll
+    C:\Windows\syswow64\kernel32.dll
+    C:\Windows\syswow64\KERNELBASE.dll
+    C:\Windows\syswow64\USER32.dll
+    C:\Windows\syswow64\GDI32.dll
+    C:\Windows\syswow64\LPK.dll
+    C:\Windows\syswow64\USP10.dll
+    C:\Windows\syswow64\msvcrt.dll
+    C:\Windows\syswow64\ADVAPI32.dll
+    C:\Windows\SysWOW64\sechost.dll
+    C:\Windows\syswow64\RPCRT4.dll
+    C:\Windows\syswow64\SspiCli.dll
+    C:\Windows\syswow64\CRYPTBASE.dll
+    C:\Windows\syswow64\comdlg32.dll
+    C:\Windows\syswow64\SHLWAPI.dll
+    C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16661_none_ebfb56996c72aefc\COMCTL32.dll
+    C:\Windows\syswow64\SHELL32.dll
+    C:\Windows\system32\VERSION.dll
+    C:\Windows\system32\WINMM.dll
+    C:\Windows\system32\IMM32.DLL
+    C:\Windows\syswow64\MSCTF.dll
+    C:\Windows\system32\uxtheme.dll
+    c:\PROGRA~2\mcafee\SITEAD~1\saHook.dll
+    C:\Windows\syswow64\ole32.dll
+    C:\Windows\syswow64\OLEAUT32.dll
+    C:\Program Files (x86)\Ready to Program\Support\Bin\edjdll.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\client\jvm.dll
+    C:\Windows\system32\apphelp.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\hpi.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\verify.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\java.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\zip.dll
+    C:\Windows\syswow64\CLBCatQ.DLL
+    C:\Windows\system32\dwmapi.dll
+    C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16661_none_420fe3fa2b8113bd\comctl32.DLL
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\dt_shmem.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\net.dll
+    C:\Windows\syswow64\WS2_32.dll
+    C:\Windows\syswow64\NSI.dll
+    C:\Windows\system32\NLAapi.dll
+    C:\Windows\System32\mswsock.dll
+    C:\Windows\system32\DNSAPI.dll
+    C:\Windows\System32\winrnr.dll
+    C:\Windows\system32\napinsp.dll
+    C:\Windows\system32\pnrpnsp.dll
+    C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live\WLIDNSP.DLL
+    C:\Windows\syswow64\PSAPI.DLL
+    C:\Program Files (x86)\Bonjour\mdnsNSP.dll
+    C:\Windows\system32\Iphlpapi.DLL
+    C:\Windows\system32\WINNSI.DLL
+    C:\Windows\System32\fwpuclnt.dll
+    C:\Windows\system32\rasadhlp.dll
+    C:\Windows\system32\dbghelp.dll
+
+  0 .V PC=0023:00469bd3 Ret=00469c6b Frame=00189af0 Stack=00189aec
+    Parameters (0x00000200 0x0000000c 0x00189b48 0x0047d11c)
+    src_jikes\access.h, AccessFlags::IsSet (), Line 0048+0019 byte(s)
+  1 .V PC=0023:00469c6b Ret=0047d11c Frame=00189b00 Stack=00189af8
+    Parameters (0x00189cf8 0xcccccccc 0xcccccccc 0x00000000)
+    src_jikes\access.h, AccessFlags::ACC_INTERFACE (), Line 0059+0027 byte(s)
+  2 .V PC=0023:0047d11c Ret=00474eae Frame=00189b48 Stack=00189b08
+    Parameters (0x09a599c8 0x00000000 0x098d6480 0x09a599c8)
+    src_jikes\bytecode.cpp, ByteCode::EmitMethodInvocation (), Line 4864+0073 byte(s)
+  3 .V PC=0023:00474eae Ret=00473894 Frame=00189b60 Stack=00189b50
+    Parameters (0x09a599c8 0x00189ebc 0x00189ed4 0x00000000)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatementExpression (), Line 1368+0000 byte(s)
+  4 .V PC=0023:00473894 Ret=00474cfe Frame=00189d04 Stack=00189b68
+    Parameters (0x09a599f0 0x098d6480 0xcccccccc 0xcccccccc)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatement (), Line 0961+0000 byte(s)
+  5 .V PC=0023:00474cfe Ret=00473824 Frame=00189d24 Stack=00189d0c
+    Parameters (0x09a59a0c 0x0018a060 0x00189ed4 0x00000000)
+    src_jikes\bytecode.cpp, ByteCode::EmitBlockStatement (), Line 1321+0023 byte(s)
+  6 .V PC=0023:00473824 Ret=00473a93 Frame=00189ec8 Stack=00189d2c
+    Parameters (0x09a59a0c 0x0018a224 0x0018a23c 0x00000000)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatement (), Line 0947+0015 byte(s)
+  7 .V PC=0023:00473a93 Ret=00474cfe Frame=0018a06c Stack=00189ed0
+    Parameters (0x09a5a0c0 0x098d6480 0xcccccccc 0xcccccccc)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatement (), Line 0998+0015 byte(s)
+  8 .V PC=0023:00474cfe Ret=00473824 Frame=0018a08c Stack=0018a074
+    Parameters (0x09a5a0e4 0x0018a3c8 0x0018a23c 0x00000000)
+    src_jikes\bytecode.cpp, ByteCode::EmitBlockStatement (), Line 1321+0023 byte(s)
+  9 .V PC=0023:00473824 Ret=00473ae8 Frame=0018a230 Stack=0018a094
+    Parameters (0x09a5a0e4 0x0018a58c 0x0018a5a4 0x00000000)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatement (), Line 0947+0015 byte(s)
+ 10 .V PC=0023:00473ae8 Ret=00474cfe Frame=0018a3d4 Stack=0018a238
+    Parameters (0x09a5a144 0x098d6480 0xcccccccc 0xcccccccc)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatement (), Line 1004+0027 byte(s)
+ 11 .V PC=0023:00474cfe Ret=00473824 Frame=0018a3f4 Stack=0018a3dc
+    Parameters (0x09a5a168 0x0018a730 0x0018a5a4 0x00000000)
+    src_jikes\bytecode.cpp, ByteCode::EmitBlockStatement (), Line 1321+0023 byte(s)
+ 12 .V PC=0023:00473824 Ret=00473ae8 Frame=0018a598 Stack=0018a3fc
+    Parameters (0x09a5a168 0x0018a844 0x0018aae8 0x00000000)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatement (), Line 0947+0015 byte(s)
+ 13 .V PC=0023:00473ae8 Ret=00474cfe Frame=0018a73c Stack=0018a5a0
+    Parameters (0x09a5a1c8 0x098d6480 0xcccccccc 0xcccccccc)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatement (), Line 1004+0027 byte(s)
+ 14 .V PC=0023:00474cfe Ret=004711fd Frame=0018a75c Stack=0018a744
+    Parameters (0x09a5a1ec 0x0018a908 0x0018aae8 0xcccccccc)
+    src_jikes\bytecode.cpp, ByteCode::EmitBlockStatement (), Line 1321+0023 byte(s)
+ 15 .V PC=0023:004711fd Ret=00498b3a Frame=0018a850 Stack=0018a764
+    Parameters (0x098d6480 0x0018a914 0x004932b4 0x0018aa90)
+    src_jikes\bytecode.cpp, ByteCode::CompileClass (), Line 0127+0000 byte(s)
+ 16 .V PC=0023:00498b3a Ret=004932b4 Frame=0018a85c Stack=0018a858
+    Parameters (0x0018aa90 0x0018aae8 0xcccccccc 0xcccccccc)
+    src_jikes\bytecode.h, ByteCode::GenerateCode (), Line 1019+0000 byte(s)
+ 17 .V PC=0023:004932b4 Ret=004928e4 Frame=0018a914 Stack=0018a864
+    Parameters (0x06ae2468 0x069924e0 0x00000000 0x0018aa9c)
+    src_jikes\control.cpp, Control::ProcessBodies (), Line 1389+0000 byte(s)
+ 18 .V PC=0023:004928e4 Ret=00490b11 Frame=0018a928 Stack=0018a91c
+    Parameters (0x09a4a750 0x0018db78 0x0018aae8 0xcccccccc)
+    src_jikes\control.cpp, Control::ProcessFile (), Line 1133+0000 byte(s)
+ 19 .V PC=0023:00490b11 Ret=004ea4c9 Frame=0018aa9c Stack=0018a930
+    Parameters (0x069b3630 0x00390e60 0xcccccccc 0xcccccccc)
+    src_jikes\control.cpp, Control::Control (), Line 0289+0000 byte(s)
+ 20 .V PC=0023:004ea4c9 Ret=00420bae Frame=0018aadc Stack=0018aaa4
+    Parameters (0x069b3630 0x00408985 0xcccccccc 0x069aef88)
+    src_jikes\jikesapi.cpp, JikesAPI::compile (), Line 0213+0048 byte(s)
+ 21 .V PC=0023:00420bae Ret=00430c1f Frame=0018ab08 Stack=0018aae4
+    Parameters (0x00000009 0x0018af34 0x0018dfdc 0xcccccccc)
+    src\edjikes.cpp, EdJikes_Compile (), Line 0220+0017 byte(s)
+ 22 .V PC=0023:00430c1f Ret=004085ef Frame=0018db78 Stack=0018ab10
+    Parameters (0x011400cc 0x02047ed0 0x00000000 0xcccccccc)
+    src\edrun.c, EdRun_Compile (), Line 0701+0014 byte(s)
+ 23 .V PC=0023:004085ef Ret=0040b05b Frame=0018db9c Stack=0018db80
+    Parameters (0x011400cc 0x00000001 0x00000000 0x00000000)
+    src\eddisp.c, EdDisp_Run (), Line 1730+0023 byte(s)
+ 24 .V PC=0023:0040b05b Ret=00409061 Frame=0018dfdc Stack=0018dba4
+    Parameters (0x011400cc 0x00000579 0x00000000 0x00408985)
+    src\eddisp.c, MyCommandHandler (), Line 3288+0015 byte(s)
+ 25 .V PC=0023:00409061 Ret=004089e0 Frame=0018e03c Stack=0018dfe4
+    Parameters (0x011400cc 0x00000111 0x00000579 0x00000001)
+    src\eddisp.c, MyCommonMessageHandler (), Line 3487+0019 byte(s)
+ 26 .V PC=0023:004089e0 Ret=759b6238 Frame=0018e064 Stack=0018e044
+    Parameters (0x011400cc 0x00000111 0x00000579 0x00000001)
+    src\eddisp.c, MyTextDisplayWindowProcedure (), Line 1962+0025 byte(s)
+ 27 .V PC=0023:759b6238 Ret=759b68ea Frame=0018e090 Stack=0018e06c
+    Parameters (0x00408985 0x011400cc 0x00000111 0x00000579)
+    Unknown module, gapfnScSendMessage() + 0624 byte(s)
+ 28 .V PC=0023:759b68ea Ret=759bcd1a Frame=0018e108 Stack=0018e098
+    Parameters (0x00000000 0x00408985 0x011400cc 0x00000111)
+    Unknown module, gapfnScSendMessage() + 2338 byte(s)
+ 29 .V PC=0023:759bcd1a Ret=759def40 Frame=0018e14c Stack=0018e110
+    Parameters (0x00ca2490 0x00000000 0x00408985 0x00000579)
+    Unknown module, GetWindow() + 0538 byte(s)
+ 30 .V PC=0023:759def40 Ret=00447d4e Frame=0018e170 Stack=0018e154
+    Parameters (0x011400cc 0x00000111 0x00000579 0x00000001)
+    Unknown module, SendMessageA() + 0076 byte(s)
+ 31 .V PC=0023:00447d4e Ret=759b6238 Frame=0018e1a8 Stack=0018e178
+    Parameters (0x001204a8 0x00000111 0x00000579 0x00200436)
+    src\edwin.c, MyEditorWindowProcedure (), Line 1165+0032 byte(s)
+ 32 .V PC=0023:759b6238 Ret=759b68ea Frame=0018e1d4 Stack=0018e1b0
+    Parameters (0x00447af5 0x001204a8 0x00000111 0x00000579)
+    Unknown module, gapfnScSendMessage() + 0624 byte(s)
+ 33 .V PC=0023:759b68ea Ret=759bcd1a Frame=0018e24c Stack=0018e1dc
+    Parameters (0x00000000 0x00447af5 0x001204a8 0x00000111)
+    Unknown module, gapfnScSendMessage() + 2338 byte(s)
+ 34 .V PC=0023:759bcd1a Ret=759def40 Frame=0018e290 Stack=0018e254
+    Parameters (0x00ca0d40 0x00000000 0x00447af5 0x00000579)
+    Unknown module, GetWindow() + 0538 byte(s)
+ 35 .V PC=0023:759def40 Ret=00403bd9 Frame=0018e2b4 Stack=0018e298
+    Parameters (0x001204a8 0x00000111 0x00000579 0x00200436)
+    Unknown module, SendMessageA() + 0076 byte(s)
+ 36 .V PC=0023:00403bd9 Ret=759b6238 Frame=0018e33c Stack=0018e2bc
+    Parameters (0x001503b2 0x00000111 0x00000579 0x00200436)
+    src\edbbar.c, MyButtonBarWindowProcedure (), Line 0579+0041 byte(s)
+ 37 .V PC=0023:759b6238 Ret=759b68ea Frame=0018e368 Stack=0018e344
+    Parameters (0x00403a15 0x001503b2 0x00000111 0x00000579)
+    Unknown module, gapfnScSendMessage() + 0624 byte(s)
+ 38 .V PC=0023:759b68ea Ret=759bcd1a Frame=0018e3e0 Stack=0018e370
+    Parameters (0x00000000 0x00403a15 0x001503b2 0x00000111)
+    Unknown module, gapfnScSendMessage() + 2338 byte(s)
+ 39 .V PC=0023:759bcd1a Ret=759bcd81 Frame=0018e424 Stack=0018e3e8
+    Parameters (0x00cb4860 0x00000000 0x00403a15 0x00000579)
+    Unknown module, GetWindow() + 0538 byte(s)
+ 40 .V PC=0023:759bcd81 Ret=759f5f4b Frame=0018e448 Stack=0018e42c
+    Parameters (0x001503b2 0x00000111 0x00000579 0x00200436)
+    Unknown module, SendMessageW() + 0076 byte(s)
+ 41 .V PC=0023:759f5f4b Ret=759f608c Frame=0018e460 Stack=0018e450
+    Parameters (0x00cb5440 0x00000000 0x00000000 0x008005a8)
+    Unknown module, LoadCursorFromFileA() + 4247 byte(s)
+ 42 .V PC=0023:759f608c Ret=759e2eec Frame=0018e488 Stack=0018e468
+    Parameters (0x008005a8 0x00000000 0x00000001 0x00000000)
+    Unknown module, LoadCursorFromFileA() + 4568 byte(s)
+ 43 .V PC=0023:759e2eec Ret=759dc775 Frame=0018e524 Stack=0018e490
+    Parameters (0x00cb5440 0x00000000 0x00000202 0x00000000)
+    Unknown module, SetKeyboardState() + 2577 byte(s)
+ 44 .V PC=0023:759dc775 Ret=759b6238 Frame=0018e54c Stack=0018e52c
+    Parameters (0x00200436 0x00000202 0x00000000 0x000d0014)
+    Unknown module, CreateMDIWindowA() + 2195 byte(s)
+ 45 .V PC=0023:759b6238 Ret=759b68ea Frame=0018e578 Stack=0018e554
+    Parameters (0x759d77d4 0x00200436 0x00000202 0x00000000)
+    Unknown module, gapfnScSend*** ENVIRONMENT CRASH ***
+
+Date: Jun 9 2012 7:09 PM
+
+File Name: C:\Program Files (x86)\Ready to Program\Ready.exe
+Version: 1.7  [11]
+File Size: 2904103
+File Date: Oct 2 2003 4:13 PM
+Operating System: After Windows XP
+JVM: Ready Built-in JRE (1.4.2 or later)
+"assert" Statements: disabled
+
+
+Cause of Crash: Access Violation
+
+Previous Operations:
+    Create File (W1) - Name: C:\Users\hma\Desktop\Jessie's Projects\PROJECT\BubblePopBoard.java - Skel: 0
+  CMD: WM_CREATE (W)
+  CMD: WM_CREATE (D)
+    Open File (1) - Window: 20974 - Name: C:\Users\hma\Desktop\Jessie's Projects\PROJECT\BubblePopBoard.java
+    Set New Text (1) - Text: 1f49008 - size: 15200
+    Set New Text (2) - sz:570:17094 - slFr:0 - slTo:0 - nlA:0
+    Line Starts: 567:17090 568:17092 569:17093 570:17094
+    Open File (2) - fileno: 0 - sizeptr: 0
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+    Create File (W1) - Name: C:\Users\hma\Desktop\Jessie's Projects\PROJECT\BubblePopAudio.java - Skel: 0
+  CMD: WM_CREATE (W)
+  CMD: WM_CREATE (D)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+    Open File (1) - Window: e0470 - Name: C:\Users\hma\Desktop\Jessie's Projects\PROJECT\BubblePopAudio.java
+    Set New Text (1) - Text: 1f47d48 - size: 2805
+    Set New Text (2) - sz:119:3057 - slFr:0 - slTo:0 - nlA:0
+    Line Starts: 116:3001 117:3010 118:3031 119:3057
+    Open File (2) - fileno: 0 - sizeptr: 0
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+    Create File (W1) - Name: C:\Users\hma\Desktop\Jessie's Projects\PROJECT\BubblePopMain.java - Skel: 0
+  CMD: WM_CREATE (W)
+  CMD: WM_CREATE (D)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_ACTIVATE (W)
+    Open File (1) - Window: a0506 - Name: C:\Users\hma\Desktop\Jessie's Projects\PROJECT\BubblePopMain.java
+    Set New Text (1) - Text: 1f5a440 - size: 4269
+    Set New Text (2) - sz:130:4853 - slFr:0 - slTo:0 - nlA:0
+    Line Starts: 127:4774 128:4807 129:4828 130:4853
+    Open File (2) - fileno: 0 - sizeptr: 0
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 1f5a440 - L: 71 - C: 11
+    Text - sz:130:4853 - slFr:0:0:0 - slTo:0:0:0 - nlA:0
+    Line Starts: 127:4774 128:4807 129:4828 130:4853
+    Set Selection (2) - sz:130:4853 - slFr:2713 - slTo:2713 - nlA:0
+    Line Starts: 127:4774 128:4807 129:4828 130:4853
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 1f5a440 - L: 71 - C: 11 (x1)
+    Text - sz:130:4853 - slFr:71:11:2713 - slTo:71:11:2713 - nlA:0
+    Line Starts: 127:4774 128:4807 129:4828 130:4853
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_RUN
+    Run (1) - Window: a0506 - Ex: 1 - Args: 0 - Step: 0
+    Recompile BubblePopBoard.java - BubblePopBoard.java newer than BubblePopBoard.class
+    Recompile BubblePopAudio.java - BubblePopAudio.java newer than BubblePopAudio.class
+    Jikes compiling BubblePopMain
+  CMD: WM_SETFOCUS (W)
+  CMD: COMMAND_RUN
+    Run (1) - Window: a0506 - Ex: 1 - Args: 0 - Step: 0
+    Recompile BubblePopBoard.java - BubblePopBoard.java newer than BubblePopBoard.class
+    Recompile BubblePopAudio.java - BubblePopAudio.java newer than BubblePopAudio.class
+    Jikes compiling BubblePopMain
+
+
+Registers
+  EAX=0000000C  EBX=00000000  ECX=00000000  EDX=00000002  ESI=00189B6C
+  EDI=00189B48  EBP=00189AF0  ESP=00189AEC  EIP=00469BD3  FLG=00010246
+  CS=0023  DS=002B  SS=002B  ES=002B  FS=0053  GS=002B
+
+List of Modules: 
+    C:\Program Files (x86)\Ready to Program\Ready.exe
+    C:\Windows\SysWOW64\ntdll.dll
+    C:\Windows\syswow64\kernel32.dll
+    C:\Windows\syswow64\KERNELBASE.dll
+    C:\Windows\syswow64\USER32.dll
+    C:\Windows\syswow64\GDI32.dll
+    C:\Windows\syswow64\LPK.dll
+    C:\Windows\syswow64\USP10.dll
+    C:\Windows\syswow64\msvcrt.dll
+    C:\Windows\syswow64\ADVAPI32.dll
+    C:\Windows\SysWOW64\sechost.dll
+    C:\Windows\syswow64\RPCRT4.dll
+    C:\Windows\syswow64\SspiCli.dll
+    C:\Windows\syswow64\CRYPTBASE.dll
+    C:\Windows\syswow64\comdlg32.dll
+    C:\Windows\syswow64\SHLWAPI.dll
+    C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16661_none_ebfb56996c72aefc\COMCTL32.dll
+    C:\Windows\syswow64\SHELL32.dll
+    C:\Windows\system32\VERSION.dll
+    C:\Windows\system32\WINMM.dll
+    C:\Windows\system32\IMM32.DLL
+    C:\Windows\syswow64\MSCTF.dll
+    C:\Windows\system32\uxtheme.dll
+    c:\PROGRA~2\mcafee\SITEAD~1\saHook.dll
+    C:\Windows\syswow64\ole32.dll
+    C:\Windows\syswow64\OLEAUT32.dll
+    C:\Program Files (x86)\Ready to Program\Support\Bin\edjdll.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\client\jvm.dll
+    C:\Windows\system32\apphelp.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\hpi.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\verify.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\java.dll
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\zip.dll
+    C:\Windows\syswow64\CLBCatQ.DLL
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\dt_shmem.dll
+    C:\Windows\system32\dwmapi.dll
+    C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16661_none_420fe3fa2b8113bd\comctl32.DLL
+    C:\Program Files (x86)\Ready to Program\Support\jre142_01\bin\net.dll
+    C:\Windows\syswow64\WS2_32.dll
+    C:\Windows\syswow64\NSI.dll
+    C:\Windows\system32\NLAapi.dll
+    C:\Windows\System32\mswsock.dll
+    C:\Windows\system32\DNSAPI.dll
+    C:\Windows\System32\winrnr.dll
+    C:\Windows\system32\napinsp.dll
+    C:\Windows\system32\pnrpnsp.dll
+    C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live\WLIDNSP.DLL
+    C:\Windows\syswow64\PSAPI.DLL
+    C:\Program Files (x86)\Bonjour\mdnsNSP.dll
+    C:\Windows\system32\Iphlpapi.DLL
+    C:\Windows\system32\WINNSI.DLL
+    C:\Windows\System32\fwpuclnt.dll
+    C:\Windows\system32\rasadhlp.dll
+    C:\Windows\system32\dbghelp.dll
+
+  0 .V PC=0023:00469bd3 Ret=00469c6b Frame=00189af0 Stack=00189aec
+    Parameters (0x00000200 0x0000000c 0x00189b48 0x0047d11c)
+    src_jikes\access.h, AccessFlags::IsSet (), Line 0048+0019 byte(s)
+  1 .V PC=0023:00469c6b Ret=0047d11c Frame=00189b00 Stack=00189af8
+    Parameters (0x00189cf8 0xcccccccc 0xcccccccc 0x00000000)
+    src_jikes\access.h, AccessFlags::ACC_INTERFACE (), Line 0059+0027 byte(s)
+  2 .V PC=0023:0047d11c Ret=00474eae Frame=00189b48 Stack=00189b08
+    Parameters (0x075a4ae8 0x00000000 0x078371f8 0x075a4ae8)
+    src_jikes\bytecode.cpp, ByteCode::EmitMethodInvocation (), Line 4864+0073 byte(s)
+  3 .V PC=0023:00474eae Ret=00473894 Frame=00189b60 Stack=00189b50
+    Parameters (0x075a4ae8 0x00189ebc 0x00189ed4 0x00000000)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatementExpression (), Line 1368+0000 byte(s)
+  4 .V PC=0023:00473894 Ret=00474cfe Frame=00189d04 Stack=00189b68
+    Parameters (0x075a4b10 0x078371f8 0xcccccccc 0xcccccccc)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatement (), Line 0961+0000 byte(s)
+  5 .V PC=0023:00474cfe Ret=00473824 Frame=00189d24 Stack=00189d0c
+    Parameters (0x075a4b2c 0x0018a060 0x00189ed4 0x00000000)
+    src_jikes\bytecode.cpp, ByteCode::EmitBlockStatement (), Line 1321+0023 byte(s)
+  6 .V PC=0023:00473824 Ret=00473a93 Frame=00189ec8 Stack=00189d2c
+    Parameters (0x075a4b2c 0x0018a224 0x0018a23c 0x00000000)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatement (), Line 0947+0015 byte(s)
+  7 .V PC=0023:00473a93 Ret=00474cfe Frame=0018a06c Stack=00189ed0
+    Parameters (0x075a51e0 0x078371f8 0xcccccccc 0xcccccccc)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatement (), Line 0998+0015 byte(s)
+  8 .V PC=0023:00474cfe Ret=00473824 Frame=0018a08c Stack=0018a074
+    Parameters (0x075a5204 0x0018a3c8 0x0018a23c 0x00000000)
+    src_jikes\bytecode.cpp, ByteCode::EmitBlockStatement (), Line 1321+0023 byte(s)
+  9 .V PC=0023:00473824 Ret=00473ae8 Frame=0018a230 Stack=0018a094
+    Parameters (0x075a5204 0x0018a58c 0x0018a5a4 0x00000000)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatement (), Line 0947+0015 byte(s)
+ 10 .V PC=0023:00473ae8 Ret=00474cfe Frame=0018a3d4 Stack=0018a238
+    Parameters (0x075a5264 0x078371f8 0xcccccccc 0xcccccccc)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatement (), Line 1004+0027 byte(s)
+ 11 .V PC=0023:00474cfe Ret=00473824 Frame=0018a3f4 Stack=0018a3dc
+    Parameters (0x075a5288 0x0018a730 0x0018a5a4 0x00000000)
+    src_jikes\bytecode.cpp, ByteCode::EmitBlockStatement (), Line 1321+0023 byte(s)
+ 12 .V PC=0023:00473824 Ret=00473ae8 Frame=0018a598 Stack=0018a3fc
+    Parameters (0x075a5288 0x0018a844 0x0018aae8 0x00000000)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatement (), Line 0947+0015 byte(s)
+ 13 .V PC=0023:00473ae8 Ret=00474cfe Frame=0018a73c Stack=0018a5a0
+    Parameters (0x075a52e8 0x078371f8 0xcccccccc 0xcccccccc)
+    src_jikes\bytecode.cpp, ByteCode::EmitStatement (), Line 1004+0027 byte(s)
+ 14 .V PC=0023:00474cfe Ret=004711fd Frame=0018a75c Stack=0018a744
+    Parameters (0x075a530c 0x0018a908 0x0018aae8 0xcccccccc)
+    src_jikes\bytecode.cpp, ByteCode::EmitBlockStatement (), Line 1321+0023 byte(s)
+ 15 .V PC=0023:004711fd Ret=00498b3a Frame=0018a850 Stack=0018a764
+    Parameters (0x078371f8 0x0018a914 0x004932b4 0x0018aa90)
+    src_jikes\bytecode.cpp, ByteCode::CompileClass (), Line 0127+0000 byte(s)
+ 16 .V PC=0023:00498b3a Ret=004932b4 Frame=0018a85c Stack=0018a858
+    Parameters (0x0018aa90 0x0018aae8 0xcccccccc 0xcccccccc)
+    src_jikes\bytecode.h, ByteCode::GenerateCode (), Line 1019+0000 byte(s)
+ 17 .V PC=0023:004932b4 Ret=004928e4 Frame=0018a914 Stack=0018a864
+    Parameters (0x097f2550 0x077f86e0 0x00000000 0x0018aa9c)
+    src_jikes\control.cpp, Control::ProcessBodies (), Line 1389+0000 byte(s)
+ 18 .V PC=0023:004928e4 Ret=00490b11 Frame=0018a928 Stack=0018a91c
+    Parameters (0x0976c550 0x0018db78 0x0018aae8 0xcccccccc)
+    src_jikes\control.cpp, Control::ProcessFile (), Line 1133+0000 byte(s)
+ 19 .V PC=0023:00490b11 Ret=004ea4c9 Frame=0018aa9c Stack=0018a930
+    Parameters (0x077fc928 0x07908310 0xcccccccc 0xcccccccc)
+    src_jikes\control.cpp, Control::Control (), Line 0289+0000 byte(s)
+ 20 .V PC=0023:004ea4c9 Ret=00420bae Frame=0018aadc Stack=0018aaa4
+    Parameters (0x077fc928 0x00408985 0xcccccccc 0x01f5a178)
+    src_jikes\jikesapi.cpp, JikesAPI::compile (), Line 0213+0048 byte(s)
+ 21 .V PC=0023:00420bae Ret=00430c1f Frame=0018ab08 Stack=0018aae4
+    Parameters (0x00000009 0x0018af34 0x0018dfdc 0xcccccccc)
+    src\edjikes.cpp, EdJikes_Compile (), Line 0220+0017 byte(s)
+ 22 .V PC=0023:00430c1f Ret=004085ef Frame=0018db78 Stack=0018ab10
+    Parameters (0x000a0506 0x01f5acb0 0x00000000 0xcccccccc)
+    src\edrun.c, EdRun_Compile (), Line 0701+0014 byte(s)
+ 23 .V PC=0023:004085ef Ret=0040b05b Frame=0018db9c Stack=0018db80
+    Parameters (0x000a0506 0x00000001 0x00000000 0x00000000)
+    src\eddisp.c, EdDisp_Run (), Line 1730+0023 byte(s)
+ 24 .V PC=0023:0040b05b Ret=00409061 Frame=0018dfdc Stack=0018dba4
+    Parameters (0x000a0506 0x00000579 0x00000000 0x00408985)
+    src\eddisp.c, MyCommandHandler (), Line 3288+0015 byte(s)
+ 25 .V PC=0023:00409061 Ret=004089e0 Frame=0018e03c Stack=0018dfe4
+    Parameters (0x000a0506 0x00000111 0x00000579 0x00000001)
+    src\eddisp.c, MyCommonMessageHandler (), Line 3487+0019 byte(s)
+ 26 .V PC=0023:004089e0 Ret=759b6238 Frame=0018e064 Stack=0018e044
+    Parameters (0x000a0506 0x00000111 0x00000579 0x00000001)
+    src\eddisp.c, MyTextDisplayWindowProcedure (), Line 1962+0025 byte(s)
+ 27 .V PC=0023:759b6238 Ret=759b68ea Frame=0018e090 Stack=0018e06c
+    Parameters (0x00408985 0x000a0506 0x00000111 0x00000579)
+    Unknown module, gapfnScSendMessage() + 0624 byte(s)
+ 28 .V PC=0023:759b68ea Ret=759bcd1a Frame=0018e108 Stack=0018e098
+    Parameters (0x00000000 0x00408985 0x000a0506 0x00000111)
+    Unknown module, gapfnScSendMessage() + 2338 byte(s)
+ 29 .V PC=0023:759bcd1a Ret=759def40 Frame=0018e14c Stack=0018e110
+    Parameters (0x00bdb650 0x00000000 0x00408985 0x00000579)
+    Unknown module, GetWindow() + 0538 byte(s)
+ 30 .V PC=0023:759def40 Ret=00447d4e Frame=0018e170 Stack=0018e154
+    Parameters (0x000a0506 0x00000111 0x00000579 0x00000001)
+    Unknown module, SendMessageA() + 0076 byte(s)
+ 31 .V PC=0023:00447d4e Ret=759b6238 Frame=0018e1a8 Stack=0018e178
+    Parameters (0x00220436 0x00000111 0x00000579 0x001e03a0)
+    src\edwin.c, MyEditorWindowProcedure (), Line 1165+0032 byte(s)
+ 32 .V PC=0023:759b6238 Ret=759b68ea Frame=0018e1d4 Stack=0018e1b0
+    Parameters (0x00447af5 0x00220436 0x00000111 0x00000579)
+    Unknown module, gapfnScSendMessage() + 0624 byte(s)
+ 33 .V PC=0023:759b68ea Ret=759bcd1a Frame=0018e24c Stack=0018e1dc
+    Parameters (0x00000000 0x00447af5 0x00220436 0x00000111)
+    Unknown module, gapfnScSendMessage() + 2338 byte(s)
+ 34 .V PC=0023:759bcd1a Ret=759def40 Frame=0018e290 Stack=0018e254
+    Parameters (0x00bb7530 0x00000000 0x00447af5 0x00000579)
+    Unknown module, GetWindow() + 0538 byte(s)
+ 35 .V PC=0023:759def40 Ret=00403bd9 Frame=0018e2b4 Stack=0018e298
+    Parameters (0x00220436 0x00000111 0x00000579 0x001e03a0)
+    Unknown module, SendMessageA() + 0076 byte(s)
+ 36 .V PC=0023:00403bd9 Ret=759b6238 Frame=0018e33c Stack=0018e2bc
+    Parameters (0x000e046a 0x00000111 0x00000579 0x001e03a0)
+    src\edbbar.c, MyButtonBarWindowProcedure (), Line 0579+0041 byte(s)
+ 37 .V PC=0023:759b6238 Ret=759b68ea Frame=0018e368 Stack=0018e344
+    Parameters (0x00403a15 0x000e046a 0x00000111 0x00000579)
+    Unknown module, gapfnScSendMessage() + 0624 byte(s)
+ 38 .V PC=0023:759b68ea Ret=759bcd1a Frame=0018e3e0 Stack=0018e370
+    Parameters (0x00000000 0x00403a15 0x000e046a 0x00000111)
+    Unknown module, gapfnScSendMessage() + 2338 byte(s)
+ 39 .V PC=0023:759bcd1a Ret=759bcd81 Frame=0018e424 Stack=0018e3e8
+    Parameters (0x00be2de0 0x00000000 0x00403a15 0x00000579)
+    Unknown module, GetWindow() + 0538 byte(s)
+ 40 .V PC=0023:759bcd81 Ret=759f5f4b Frame=0018e448 Stack=0018e42c
+    Parameters (0x000e046a 0x00000111 0x00000579 0x001e03a0)
+    Unknown module, SendMessageW() + 0076 byte(s)
+ 41 .V PC=0023:759f5f4b Ret=759f608c Frame=0018e460 Stack=0018e450
+    Parameters (0x00bd9830 0x00000000 0x00000000 0x008c8af8)
+    Unknown module, LoadCursorFromFileA() + 4247 byte(s)
+ 42 .V PC=0023:759f608c Ret=759e2eec Frame=0018e488 Stack=0018e468
+    Parameters (0x008c8af8 0x00000000 0x00000001 0x00000000)
+    Unknown module, LoadCursorFromFileA() + 4568 byte(s)
+ 43 .V PC=0023:759e2eec Ret=759dc775 Frame=0018e524 Stack=0018e490
+    Parameters (0x00bd9830 0x00000000 0x00000202 0x00000000)
+    Unknown module, SetKeyboardState() + 2577 byte(s)
+ 44 .V PC=0023:759dc775 Ret=759b6238 Frame=0018e54c Stack=0018e52c
+    Parameters (0x001e03a0 0x00000202 0x00000000 0x000e0026)
+    Unknown module, CreateMDIWindowA() + 2195 byte(s)
+ 45 .V PC=0023:759b6238 Ret=759b68ea Frame=0018e578 Stack=0018e554
+    Parameters (0x759d77d4 0x001e03a0 0x00000202 0x00000000)
+    Unknown module, gapfnScSendMessage() + 0624 byte(s)
+ 46 .V PC=0023:759b68ea Ret=759b7d31 Frame=0018e5f0 Stack=0018e580
+    Parameters (0x00000000 0x7776939c 0x001e03a0 0x00000202)
+    Unknown module, gapfnScSendMessage() + 2338 byte(s)
+ 47 .V PC=0023:759b7d31 Ret=759b8112 Frame=0018e650 Stack=0018e5f8
+    Parameters (0x7776939c 0x00000001 0x0018e670 0x00403197)
+    Unknown module, LoadStringW() + 0287 byte(s)
+ 48 .V PC=0023:759b8112 Ret=00403197 Frame=0018e660 Stack=0018e658
+    Parameters (0x0018e680 0x0018e67c 0x0018e6a0 0x00403102)
+    Unknown module, DispatchMessageA() + 0015 byte(s)
+ 49 .V PC=0023:00403197 Ret=00403102 Frame=0018e670 Stack=0018e668
+    Parameters (0x0018e680 0x0018e6a8 0x001e03a0 0x00000202)
+    src\ed.c, MyProcessMessage (), Line 1834+0012 byte(s)
+
+------------------------------------------------------

@@ -1,0 +1,1168 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import javax.swing.event.*;
+//http://www.google.ca/imgres?imgurl=http://www.psdgraphics.com/wp-content/uploads/2010/09/red-crystal-ball.jpg&imgrefurl=http://www.psdgraphics.com/graphics/colorful-3d-crystal-balls/&usg=__aEzEP2trrvWea2f8oqKbH_urp0c=&h=458&w=610&sz=37&hl=en&start=5&zoom=1&tbnid=BURMvFyhaCl8cM:&tbnh=102&tbnw=136&ei=SP68T4LZIOeO6gG9rIVD&prev=/search%3Fq%3D3D%2Bball%26hl%3Den%26sa%3DX%26rls%3Dcom.microsoft:en-ca%26tbm%3Disch%26prmd%3Divns&itbs=1
+
+/** The "Project_Methods" class.
+  * This class contains all the methods that run the game Bubble Pop
+  * @author Sofia Kim, Tracy Lei, Jessie Ma
+  * @version June 18, 2012
+ */
+public class BubblePopBoard extends JPanel implements MouseListener,
+    KeyListener
+{
+    // Set constant values to all the bubbles, stones, cracked stones, and empty spaces
+    private final int ONE = 1;
+    private final int TWO = 2;
+    private final int THREE = 3;
+    private final int FOUR = 4;
+    private final int FIVE = 5;
+    private final int SIX = 6;
+    private final int SEVEN = 7;
+    private final int STONE = 8;
+    private final int CRACKED = 9;
+    private final int EMPTY = 0;
+
+    // Sets the size of the board to play and other constants during the game including
+    // the speed of the bubble/stone dropping
+    private final int SQUARE_SIZE = 64;
+    private final int DROPPING_SPEED = 20;
+    private final int NO_OF_ROWS = 7;
+    private final int NO_OF_COLUMNS = 7;
+    private final boolean ANIMATION_ON = true;
+
+    //private final String IMAGE_FILENAME_BALL_BROKEN = "broken ball.png";
+
+    public final Dimension BOARD_SIZE =
+	new Dimension (NO_OF_COLUMNS * SQUARE_SIZE + 210,
+	    (NO_OF_ROWS + 1) * SQUARE_SIZE + 1);
+
+    // Program variables (declared at the top, these can be
+    // used or changed by any method)
+    private int[] [] board;
+    private boolean droppingPiece;
+    private int xFallingPiece, yFallingPiece;
+    private int currentColumn;
+    private boolean gameOver;
+    private int[] pieces = {1, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, STONE};
+    private int level;
+    private int levelBubbles;
+    private int score;
+    private int chain;
+    private int longestChain;
+    private int randomPiece;
+
+    private Image[] ballImages;
+    private Image[] poppingBallImages;
+    private Image firstBallImage;
+    private Image secondBallImage;
+    private Image thirdBallImage;
+    private Image fourthBallImage;
+    private Image fifthBallImage;
+    private Image sixthBallImage;
+    private Image seventhBallImage;
+    private Image crackedBallImage;
+    private Image stoneBallImage;
+
+    private int noOfBubblesPopped;
+    private int gameStatus;
+
+    private BubblePopAudio audio;
+
+    private Image imageBackground, sideImage, imageNewGame, imageNewGameBlack, imageHelp, imageHelpBlack,
+	imageRank, imageRankBlack, imageAbout, imageAboutBlack, imageExit, imageExitBlack, introImageBackground,
+	imageRightButton, imageLeftButton, imageRightButtonClicked, imageLeftButtonClicked, imageHelpExit,
+	imageHelpExitBlack, aboutInstruction;
+    private Image[] helpInstructionImages;
+    private Image helpInstructionOne, helpInstructionTwo, helpInstructionThree, helpInstructionFour,
+	helpInstructionFive, helpInstructionSix, helpInstructionSeven;
+
+    private boolean highlightNewGame, highlightHelp, highlightRank, highlightAbout, highlightExit,
+	highlightSound, highlightRightButton, highlightLeftButton, highlightHelpExit,
+	showPrevious, showNext;
+
+    private boolean bubblePopped;
+    private int theBubblePopped;
+    private int xPopped;
+    private int yPopped;
+
+    private Image soundOffImage, soundHighlightedImage;
+    private boolean soundOn;
+
+    private Point testPos;
+    private long startTime;
+    //    private Image poppingImage;
+
+    // Arrays that keep track of the name and score of the highest scores
+    private int[] highestScores = new int [5];
+    private String[] highestNames = new String [5];
+
+    private boolean helpScreen;
+    private boolean showRank;
+    private boolean showAbout;
+
+    private boolean levelBonus, clearBonus;
+    private Image levelImage, clearImage, gameOverImage;
+
+    private int currentPage;
+
+
+    //   private HighScoresOutput highScores;
+
+
+    /** Constructs a new BubblePopBoard object
+      */
+    public BubblePopBoard ()
+    {
+	// Sets up the board area, loads in piece images and starts a new game
+	setPreferredSize (BOARD_SIZE);
+
+	setBackground (new Color (200, 200, 200));
+	// Add mouse listeners and Key Listeners to the game board
+	addMouseListener (this);
+	setFocusable (true);
+	addKeyListener (this);
+	requestFocusInWindow ();
+	this.addMouseMotionListener (new MouseMotionHandler ());
+
+	// Load up the images for the pieces
+	ballImages = new Image [10];
+	for (int i = 1 ; i < ballImages.length ; i++)
+	{
+	    ballImages [i] = new ImageIcon ("ball" + i + ".png").getImage ();
+	}
+
+	poppingBallImages = new Image [8];
+	for (int i = 1 ; i < poppingBallImages.length ; i++)
+	{
+	    poppingBallImages [i] = new ImageIcon ("PoppingBall" + i + ".gif").getImage ();
+	}
+
+	// Sets up the board array and starts a new game
+	board = new int [NO_OF_ROWS + 2] [NO_OF_COLUMNS + 2];
+	gameOver = false;
+	level = 1;
+	levelBubbles = 30;
+	noOfBubblesPopped = 0;
+	newGame ();
+
+	// Audio attempts
+	audio = new BubblePopAudio ();
+
+	gameStatus = 1;
+
+	// background image was made 550x350 pixels (to fit 11 columns by 7 rows, with each square being 50 pixels wide & high)
+	introImageBackground = new ImageIcon ("project images/BubblePopStartMenu.png").getImage ();
+
+	// load images
+	// background image was made 550x350 pixels (to fit 11 columns by 7 rows, with each square being 50 pixels wide & high)
+	sideImage = new ImageIcon ("project images 2/sidebar.png").getImage ();
+	imageBackground = new ImageIcon ("project images 2/circlebackground.png").getImage ();
+	//imageHelp1 = new ImageIcon ("Images/HelpInstructions1.png").getImage ();
+	imageNewGame = new ImageIcon ("project images 2/new game.png").getImage ();
+	imageNewGameBlack = new ImageIcon ("project images 2/new game black.png").getImage ();
+	imageHelp = new ImageIcon ("project images 2/help.png").getImage ();
+	imageHelpBlack = new ImageIcon ("project images 2/help black.png").getImage ();
+	imageRank = new ImageIcon ("project images 2/rank.png").getImage ();
+	imageRankBlack = new ImageIcon ("project images 2/rank black.png").getImage ();
+	imageAbout = new ImageIcon ("project images 2/about.png").getImage ();
+	imageAboutBlack = new ImageIcon ("project images 2/about black.png").getImage ();
+	imageExit = new ImageIcon ("project images 2/exit.png").getImage ();
+	imageExitBlack = new ImageIcon ("project images 2/exit black.png").getImage ();
+
+	soundHighlightedImage = new ImageIcon ("soundHighlightedImage.png").getImage ();
+	soundOffImage = new ImageIcon ("soundOffImage.png").getImage ();
+	soundOn = true;
+
+	bubblePopped = false;
+	theBubblePopped = 0;
+	xPopped = 0;
+	yPopped = 0;
+
+	helpScreen = false;
+	showRank = false;
+	showAbout = false;
+
+	clearImage = new ImageIcon ("clearBonus.png").getImage ();
+	levelImage = new ImageIcon ("levelUp.png").getImage ();
+	gameOverImage = new ImageIcon ("game over.png").getImage ();
+
+	helpInstructionImages = new Image [7];
+	for (int i = 1 ; i < helpInstructionImages.length ; i++)
+	{
+	    helpInstructionImages [i] = new ImageIcon ("project images 2/Help" + i + ".png").getImage ();
+	}
+
+	// Load up images for the help and about screens
+	aboutInstruction = new ImageIcon ("project images 2/aboutInstruction.png").getImage ();
+	imageNewGame = new ImageIcon ("project images 2/new game.png").getImage ();
+	imageNewGameBlack = new ImageIcon ("project images 2/new game black.png").getImage ();
+	imageHelp = new ImageIcon ("project images 2/help.png").getImage ();
+	imageHelpBlack = new ImageIcon ("project images 2/help black.png").getImage ();
+	imageRank = new ImageIcon ("project images 2/rank.png").getImage ();
+	imageRankBlack = new ImageIcon ("project images 2/rank black.png").getImage ();
+	imageAbout = new ImageIcon ("project images 2/about.png").getImage ();
+	imageAboutBlack = new ImageIcon ("project images 2/about black.png").getImage ();
+	imageExit = new ImageIcon ("project images 2/exit.png").getImage ();
+	imageExitBlack = new ImageIcon ("project images 2/exit black.png").getImage ();
+	imageHelpExit = new ImageIcon ("project images 2/exitImage.png").getImage ();
+	imageHelpExitBlack = new ImageIcon ("project images 2/exitImageClicked.png").getImage ();
+	imageRightButton = new ImageIcon ("project images 2/rightButton.png").getImage ();
+	imageRightButtonClicked = new ImageIcon ("project images 2/rightButtonClicked.png").getImage ();
+	imageLeftButton = new ImageIcon ("project images 2/leftButton.png").getImage ();
+	imageLeftButtonClicked = new ImageIcon ("project images 2/leftButtonClicked.png").getImage ();
+    }
+
+
+    /** Starts a new game
+    */
+    public void newGame ()
+    {
+	randomPiece = 1; //pieces [(int) (Math.random () * 8 + 1)];
+
+	clearBoard ();
+	// for (int randomPieces = 0 ; randomPieces <= 5 ; randomPieces++)
+	// {
+	//     int column = (int) (Math.random () * 7 + 1);
+	//     int row = findRow (column);
+	//     if (board [row] [column] == 0)
+	//     {
+	//         board [row] [column] = (int) (Math.random () * 8 + 1);
+	//         checkForBubblesToPop ();
+	//         if (bubblePopped)
+	//         {
+	//             randomPieces--;
+	//             bubblePopped = false;
+	//         }
+	//     }
+	//     else
+	//         randomPieces--;
+	// }
+
+	gameOver = false;
+	currentColumn = NO_OF_COLUMNS / 2 + 1;
+	droppingPiece = false;
+	level = 1;
+	levelBubbles = 30;
+	levelBonus = false;
+	clearBonus = false;
+	score = 0;
+	chain = 0;
+	longestChain = 0;
+	playSound ();
+	repaint ();
+
+	//poppingImage = null;
+    }
+
+
+    /* resets the board to Empty
+     */
+    private void clearBoard ()
+    {
+	board = new int [NO_OF_ROWS + 2] [NO_OF_COLUMNS + 2];
+    }
+
+
+    /* Finds and returns the row to place the piece in
+     * @ param column the column of the item goes in
+     * @ return the row to place the piece in
+     */
+    private int findRow (int column)
+    {
+	int row = board.length - 2;
+	while (board [row] [column] != 0)
+	{
+	    row--;
+	}
+
+	if (row <= 0)
+	    return -1;
+	return row;
+    }
+
+
+    /** Makes a move on the board (if possible)
+      * @param colToMove the selected column to move in
+      */
+    private void makeMove (int colToMove)
+    {
+	if (gameOver)
+	    paintImmediately (0, 0, getWidth (), getHeight ());
+	else  // Create a new piece (bubble or stone) to be dropped
+	{
+	    // Finds the row to drop the piece
+	    int row = findRow (colToMove);
+	    if (row <= 0)
+	    {
+		JOptionPane.showMessageDialog (this,
+			"Please Select another Column",
+			"Column is Full", JOptionPane.WARNING_MESSAGE);
+		return;
+	    }
+	    // Shows the piece dropping
+	    if (ANIMATION_ON)
+		animatePiece (randomPiece, colToMove, row);
+	    board [row] [colToMove] = randomPiece;
+	    board [0] [4] = EMPTY;
+	    repaint ();
+	    chain = 0;
+	    do
+	    {
+		checkForBubblesToPop ();
+		chain++;
+		if (chain > longestChain)
+		    longestChain = chain;
+	    }
+	    while (noOfBubblesPopped != 0);
+	    // Checks for a game over (because if the last piece dropped is
+	    // still able to be popped, then the game continues)
+	    if (checkForGameOver ())
+		paintImmediately (0, 0, getWidth (), getHeight ());
+	    else
+		levelUp ();
+
+	    // Generates a new random piece
+	    randomPiece = pieces [(int) (Math.random () * 8 + 1)];
+
+	}
+	// Start piece in centre
+	currentColumn = NO_OF_COLUMNS / 2 + 1;
+	repaint ();
+    }
+
+
+    /** Animates a falling piece
+      *@param piece the piece that is falling
+      *@param column the column the piece is falling in
+      *@param finalRow the final row the piece will fall to
+      */
+    private void animatePiece (int piece, int column, int finalRow)
+    {
+	droppingPiece = true;
+	for (double row = 0 ; row < finalRow ; row += 0.20)
+	{
+	    // Find the x and y positions for the falling piece
+	    xFallingPiece = (column - 1) * SQUARE_SIZE;
+	    yFallingPiece = (int) (row * SQUARE_SIZE);
+
+	    // Update the drawing area
+	    paintImmediately (0, 0, getWidth (), getHeight ());
+
+	    delay (DROPPING_SPEED);
+
+	}
+
+	droppingPiece = false;
+    }
+
+
+    /** Delays the given number of milliseconds
+      *@param milliSec The number of milliseconds to delay
+      */
+    private void delay (int milliSec)
+    {
+	try
+	{
+	    Thread.sleep (milliSec);
+	}
+
+
+	catch (InterruptedException e)
+	{
+	}
+    }
+
+
+    /** Repaint the board's drawing panel
+      * @param g The Graphics context
+      */
+    public void paintComponent (Graphics g)
+    {
+	super.paintComponent (g);
+
+	if (gameOver)
+	{
+	    g.drawImage (gameOverImage, 0, 0, this);
+	    return;
+	}
+	// Redraw the board with current pieces
+	if (gameStatus == 1)
+	{
+	    g.drawImage (introImageBackground, 0, 0, this);
+	    g.drawImage (sideImage, 448, 0, this);
+	}
+	else
+	{
+	    g.drawImage (imageBackground, 0, 0, this);
+	    g.drawImage (sideImage, 448, 0, this);
+	    for (int row = 1 ; row <= NO_OF_ROWS ; row++)
+		for (int column = 1 ; column <= NO_OF_COLUMNS ; column++)
+		{
+		    // Find the x and y positions for each row and column
+		    int xPos = (column - 1) * SQUARE_SIZE;
+		    int yPos = row * SQUARE_SIZE;
+
+		    // Draw each piece, depending on the value in board
+		    int piece = board [row] [column];
+		    if (piece == CRACKED)
+			g.drawImage (ballImages [9], xPos, yPos, this);
+		    else if (board [row] [column] != EMPTY)
+		    {
+			g.drawImage (ballImages [piece], xPos, yPos, this);
+
+		    }
+		}
+
+	    if (bubblePopped)
+		//if (poppingBallImages [2] != null)
+		{
+		    g.drawImage (poppingBallImages [theBubblePopped], xPopped, yPopped, this);
+		    if (System.currentTimeMillis () - startTime > 450) //instead of 1000 put the time it takes to disappear
+		    {
+			bubblePopped = false;
+		    }
+		    repaint ();
+		}
+
+	    // Draw moving piece if animating
+	    if (droppingPiece)
+	    {
+		g.drawImage (ballImages [randomPiece], xFallingPiece, yFallingPiece, this);
+	    }
+
+
+	    else   // Draw next piece
+	    {
+		if (!gameOver)
+		    g.drawImage (ballImages [randomPiece], (currentColumn - 1) * SQUARE_SIZE, 0, this);
+	    }
+
+	    // Shows whether the sound has been turned on or off
+	    if (soundOn == false)
+		g.drawImage (soundOffImage, 448, 0, this);
+	    if (highlightSound)
+		g.drawImage (soundHighlightedImage, 448, 0, this);
+
+	    // Displays the score of the current game being played
+	    setFont (new Font ("Broadway", Font.BOLD, 36));
+	    g.setColor (Color.BLACK);
+	    g.drawString (String.valueOf (score), 490, 50);
+
+	    //  setFont (new Font ("Broadway", Font.BOLD, 14));
+	    g.drawString ("level " + String.valueOf (level), 490, 100);
+
+	    // Level bonus and clear bonus
+	    if (levelBonus)
+	    {
+		g.drawImage (levelImage, 0, 0, this);
+		levelBonus = false;
+	    }
+	    if (clearBonus)
+	    {
+		g.drawImage (clearImage, 0, 0, this);
+		clearBonus = false;
+	    }
+
+	    // Shows the chain, if there is one
+	    // if (chain >1)
+	    // {
+	    //     //setFont (new Font ("Broadway", Font.BOLD, 14));
+	    //     g.drawString ("Chain = " + (chain - 1), 200, 200);
+	    //     delay (100);
+	    //     return;
+	    // }
+
+	    // if (longestChain != 0)
+	    // {
+	    //     setFont (new Font ("Broadway", Font.BOLD, 14));
+	    //     g.drawString ("Longest chain = " + (longestChain-1), 400, 420);
+	    // }
+
+	}
+
+	// Draw help image in the sidebar. If the mouse is over the help image, "highlight" it by drawing a BLACK "Help" image.
+	// The highlightHelp variable is set to true in the mouseMoved method when the mouse is over the "Help" image.
+	if (highlightNewGame)
+	    // Images can be scaled to size, such as in the line below (70 x 40 pixels), but scaling slows down things.
+	    g.drawImage (imageNewGameBlack, 480, 120, 150, 40, this);
+	else
+	    g.drawImage (imageNewGame, 480, 120, 150, 40, this);
+
+	if (highlightHelp)
+	    // Images can be scaled to size, such as in the line below (70 x 40 pixels), but scaling slows down things.
+	    g.drawImage (imageHelpBlack, 480, 175, 150, 40, this);
+	else
+	    g.drawImage (imageHelp, 480, 175, 150, 40, this);
+
+	if (highlightRank)
+	    // Images can be scaled to size, such as in the line below (70 x 40 pixels), but scaling slows down things.
+	    g.drawImage (imageRankBlack, 480, 230, 150, 40, this);
+	else
+	    g.drawImage (imageRank, 480, 230, 150, 40, this);
+
+	if (highlightAbout)
+	    // Images can be scaled to size, such as in the line below (70 x 40 pixels), but scaling slows down things.
+	    g.drawImage (imageAboutBlack, 480, 285, 150, 40, this);
+	else
+	    g.drawImage (imageAbout, 480, 285, 150, 40, this);
+
+	if (highlightExit)
+	    // Images can be scaled to size, such as in the line below (70 x 40 pixels), but scaling slows down things.
+	    g.drawImage (imageExitBlack, 480, 340, 150, 40, this);
+	else
+	    g.drawImage (imageExit, 480, 340, 150, 40, this);
+
+	if (helpScreen)
+	{
+	    g.drawImage (helpInstructionImages [currentPage], 63, 60, 530, 380, this);
+	    if (highlightRightButton)
+		g.drawImage (imageRightButtonClicked, 490, 80, 30, 30, this);
+	    else
+		g.drawImage (imageRightButton, 490, 80, 30, 30, this);
+
+	    if (highlightLeftButton)
+		g.drawImage (imageLeftButtonClicked, 330, 80, 30, 30, this);
+	    else
+		g.drawImage (imageLeftButton, 330, 80, 30, 30, this);
+
+	    if (highlightHelpExit)
+		g.drawImage (imageHelpExitBlack, 400, 80, 50, 30, this);
+	    else
+		g.drawImage (imageHelpExit, 400, 80, 50, 30, this);
+	}
+
+	if (showRank)
+	{
+	    setFont (new Font ("Broadway", Font.BOLD, 20));
+	    g.drawString ("High Scores", 110, 100);
+	    g.drawString ("1. JESSIE MA ... 9001", 15, 200);
+	    showRank = false;
+
+	    // Draw the background with 1, 2, 3, 4, 5
+	    // g.drawString (String.valueOf (scores)) ---> in a for loop
+	    // g.drawString (Player names) ---> in a for loop
+	}
+	if (showAbout)
+	{
+	    g.drawImage (aboutInstruction, 63, 60, 530, 380, this);
+	    if (highlightHelpExit)
+		g.drawImage (imageHelpExitBlack, 400, 80, 50, 30, this);
+	    else
+		g.drawImage (imageHelpExit, 400, 80, 50, 30, this);
+	}
+
+    } // paint component method
+
+
+    /* COMMENTS~~~~~~~~~~~~~
+       */
+    private void checkForBubblesToPop ()
+    {
+	noOfBubblesPopped = 0;
+	//Keeps track of the number of pieces in the columns and rows
+	//Dummy variable used
+	int[] columnHeights = new int [8];
+
+	//Counts number of pieces in each column
+	for (int col = 1 ; col <= NO_OF_COLUMNS ; col++)
+	{
+	    int inColumn = 0;
+	    int checkRow = NO_OF_ROWS;
+	    //Counts the number of pieces in the column that we're looking at
+	    while (board [checkRow] [col] != EMPTY && checkRow > 0)
+	    {
+		checkRow--;
+		inColumn++;
+	    }
+	    columnHeights [col] = inColumn;
+	    // if (inColumn > tallestColumn)
+	    //     tallestColumn = inColumn;
+	}
+
+
+
+	for (int row = NO_OF_ROWS ; row > 0 ; row--)
+	{
+	    int checkColumn = 1;
+	    while (checkColumn <= NO_OF_COLUMNS)
+	    {
+		int inARow = 0;
+		//finds next starting piece (starting as in it is beside a space) in that row
+		while (board [row] [checkColumn] == EMPTY && checkColumn <= NO_OF_COLUMNS)
+		    checkColumn++;
+
+		int col = checkColumn;
+		//Counts the number of pieces in a row (with no empty spaces in between) with the starting piece
+		//I DON'T REALLY NEED CHECKCOLUMN < BOARD.LENGTH -2 CUZ THE BORDER IS ALWAYS EMPTY!!!!!~~~~~~~~~~~~~~~~~~~~~~~
+		while (board [row] [checkColumn] != EMPTY && checkColumn <= NO_OF_COLUMNS)
+		{
+		    inARow++;
+		    checkColumn++;
+		}
+		for (; col < checkColumn ; col++)
+		{
+		    if (board [row] [col] == inARow)
+		    {
+			xPopped = (col - 1) * SQUARE_SIZE;
+			yPopped = row * SQUARE_SIZE;
+			bubblePopped = true;
+			startTime = System.currentTimeMillis ();
+
+			theBubblePopped = inARow;
+			board [row] [col] = EMPTY;
+			noOfBubblesPopped++;
+			if (chain == 0)
+			    score += 10;
+			else
+			    score += chain * 50;
+			crackStone (row, col);
+			paintImmediately (0, 0, getWidth (), getHeight ());
+
+		    }
+
+		}
+	    }
+	}
+	for (int row = NO_OF_ROWS ; row > 0 ; row--)
+	{
+	    for (int col = 1 ; col <= NO_OF_COLUMNS ; col++)
+	    {
+		//"pops bubble" by making the space empty
+		if (board [row] [col] == columnHeights [col] && columnHeights [col] != 0)
+		{
+		    xPopped = (col - 1) * SQUARE_SIZE;
+		    yPopped = row * SQUARE_SIZE;
+		    bubblePopped = true;
+		    startTime = System.currentTimeMillis ();
+		    theBubblePopped = columnHeights [col];
+		    board [row] [col] = EMPTY;
+		    if (chain == 0)
+			score += 10;
+		    else
+			score += chain * 50;
+		    crackStone (row, col);
+		    noOfBubblesPopped++;
+		    paintImmediately (0, 0, getWidth (), getHeight ());
+
+		}
+	    }
+	}
+	// if (bubblePopped)
+	// {
+	//     board[0][4] = EMPTY;
+	//     delay (450); // delayed for the time it takes for the bubble popping gif to run
+	//     paintImmediately (0, 0, getWidth (), getHeight ());
+	// }
+	for (int col = 1 ; col <= NO_OF_COLUMNS ; col++)
+	    alignColumn (col);
+
+	repaint ();
+    }
+
+
+
+
+    /** This section of code makes a stone crack and causes it to turn into a bubble
+      * @param row the row of the last popped bubble
+      * @param col the column of the last popped bubble
+      */
+    public void crackStone (int row, int col)
+    {
+	// Checks for a cracked stone to the right the popped bubble and turns them into a numbered bubble
+	if (board [row] [col + 1] == CRACKED)
+	{
+	    board [row] [col + 1] = pieces [(int) (Math.random () * 7 + 1)];
+	    paintImmediately (0, 0, getWidth (), getHeight ());
+	    delay (800);
+	}
+	if (board [row] [col - 1] == CRACKED)
+	{
+	    board [row] [col - 1] = pieces [(int) (Math.random () * 7 + 1)];
+	    paintImmediately (0, 0, getWidth (), getHeight ());
+	    delay (800);
+	}
+	if (board [row + 1] [col] == CRACKED)
+	{
+	    board [row + 1] [col] = pieces [(int) (Math.random () * 7 + 1)];
+	    paintImmediately (0, 0, getWidth (), getHeight ());
+	    delay (800);
+	}
+	if (board [row - 1] [col] == CRACKED)
+	{
+	    board [row - 1] [col] = pieces [(int) (Math.random () * 7 + 1)];
+	    paintImmediately (0, 0, getWidth (), getHeight ());
+	    delay (800);
+	}
+
+
+
+	// Checks for stones around the popped bubble and turns them into cracked stones
+	if (board [row] [col + 1] == STONE)
+	    board [row] [col + 1] = CRACKED;
+	if (board [row] [col - 1] == STONE)
+	    board [row] [col - 1] = CRACKED;
+	if (board [row + 1] [col] == STONE)
+	    board [row + 1] [col] = CRACKED;
+	if (board [row - 1] [col] == STONE)
+	    board [row - 1] [col] = CRACKED;
+
+	repaint ();
+    }
+
+
+    /** Checks for a game over
+      * @return whether the game is over or not
+      */
+    private boolean checkForGameOver ()
+    {
+	int noOfPieces = 0;
+	// Counts the number of pieces on the board
+	for (int col = 1 ; col <= 7 ; col++)
+	{
+	    for (int row = 7 ; row > 0 ; row--)
+	    {
+		if (board [row] [col] != EMPTY)
+		    noOfPieces++;
+	    }
+
+	}
+
+	// Game over if all the spaces are filled
+	if (noOfPieces >= 49)
+	{
+	    gameOver = true;
+	    return true; // NOTE TO SELF: IF IT DOESN'T GAME OVER WHEN IT SHOULD,
+	    // CREATE A BOOLEAN GAMEOVER AND SET UP THE IF/ELSE IN MAKEMOVE
+	}
+
+	// Gives a "clear bonus" if there are no pieces on the board
+	if (noOfPieces == 0)
+	{
+	    if (soundOn)
+		audio.tada ();
+	    clearBonus = true;
+	    paintImmediately (0, 0, getWidth (), getHeight ());
+	    delay (2000);
+	    score += 30000;
+	}
+	return false;
+    }
+
+
+    /** Displays the screen when the game is over
+      */
+    private void gameIsOver ()
+    {
+	JOptionPane.showMessageDialog (this,
+		"Please Select Game...New to start a new game",
+		"Game Over", JOptionPane.WARNING_MESSAGE);
+	// if (highestScore(highestScores, highestNames) != 0)
+	//     // Allow player to enter their name in the place where the should have scored
+	// else
+	//    // Do something that displays the high score table
+	return;
+    }
+
+
+
+    /** COMMENTS!!               ALKJA;LSDJFKLA;SJDFL;ASJKDFSL;AJL;SDKJFKL;ASDJF;SAKJF;ASLKDJFSL;AFJASDFASDFADFFDASAD
+      *
+      */
+    private void alignColumn (int col)
+    {
+	//Goes up the current column
+	for (int checkRow = NO_OF_ROWS ; checkRow > 0 ; checkRow--)
+	{
+	    //When a space is reached, everything above it is moved down a row
+	    if (board [checkRow] [col] == EMPTY)
+	    {
+		int checkRow2 = checkRow - 1;
+		while (checkRow2 >= 0)
+		{
+		    //animatePiece (board [checkRow2 + 1] [col], col, checkRow2);
+		    board [checkRow2 + 1] [col] = board [checkRow2] [col];
+		    checkRow2--;
+		}
+	    }
+	}
+    }
+
+
+    /** Increases the level and creates a row of stones
+	  */
+    private void levelUp ()
+    {
+	if (levelBubbles == 0)
+	{
+	    for (int col = 1 ; col <= 7 ; col++)
+	    {
+		for (int row = 1 ; row <= 7 ; row++)
+		{
+		    board [row - 1] [col] = board [row] [col];
+		}
+		board [7] [col] = STONE;
+		repaint ();
+	    }
+	    for (int col = 1 ; col <= 7 ; col++)
+		if (board [0] [col] != EMPTY)
+		{
+		    paintImmediately (0, 0, getWidth (), getHeight ());
+		    gameOver = true;
+		}
+	    level++;
+	    if (soundOn)
+		audio.levelingUp ();
+	    // Checks if any bubbles popped due to the new level
+	    chain = 0;
+	    do
+	    {
+		checkForBubblesToPop ();
+		chain++;
+	    }
+	    while (noOfBubblesPopped != 0);
+	    levelBonus = true;
+	    paintImmediately (0, 0, getWidth (), getHeight ());
+	    delay (2000);
+	    score += 5000;
+	    levelBubbles = 30 - level;
+	}
+
+	else
+	    levelBubbles--;
+    }
+
+
+    /** Monitors mouse movement over the game panel and responds
+    */
+    private class MouseMotionHandler extends MouseMotionAdapter
+    {
+	/** Responds to mouse-movement inputs
+	  * @param event   The event created by the mouse movement
+	*/
+	public void mouseMoved (MouseEvent event)
+	{
+	    Point pos = event.getPoint ();
+	    testPos = pos;
+	    // If mouse is over the "New game" image of the main screen, then highlight/change the "new game" image
+	    if (pos.x >= 480 && pos.x < 630 && pos.y >= 120 && pos.y < 160) //&& helpScreen == false)
+	    {
+		highlightNewGame = true;
+	    }
+	    else
+	    {
+		highlightNewGame = false;
+	    }
+
+	    repaint (); //Repaint the screen to show any changes
+
+	    // If mouse is over the "Help" image of the main screen, then highlight/change the "help" image
+	    if (pos.x >= 480 && pos.x < 630 && pos.y >= 175 && pos.y < 215) // && helpScreen == false)
+	    {
+		highlightHelp = true;
+	    }
+	    else
+	    {
+		highlightHelp = false;
+	    }
+
+	    repaint (); //Repaint the screen to show any changes
+
+
+	    // If mouse is over the "Rank" image of the main screen, then highlight/change the "rank" image
+	    if (pos.x >= 480 && pos.x < 630 && pos.y >= 230 && pos.y < 270) // && helpScreen == false)
+		highlightRank = true;
+	    else
+		highlightRank = false;
+
+	    repaint (); //Repaint the screen to show any changes
+
+	    // If mouse is over the "About" image of the main screen, then highlight/change the "about" image
+	    if (pos.x >= 480 && pos.x < 630 && pos.y >= 285 && pos.y < 325) // && helpScreen == false)
+		highlightAbout = true;
+	    else
+		highlightAbout = false;
+	    repaint (); //Repaint the screen to show any changes
+
+	    // If mouse is over the "Exit" image of the main screen, then highlight/change the "exit" image
+	    if (pos.x >= 480 && pos.x < 630 && pos.y >= 340 && pos.y < 370) // && helpScreen == false)
+		highlightExit = true;
+	    else
+		highlightExit = false;
+	    if (pos.x >= 485 && pos.x < 520 && pos.y >= 450 && pos.y < 490)
+		highlightSound = true;
+	    else
+		highlightSound = false;
+
+	    // Highlights buttons on the help screen
+	    if (pos.x >= 490 && pos.x < 520 && pos.y >= 80 && pos.y < 110 && helpScreen == true && showAbout == false && showRank == false)
+		highlightRightButton = true;
+	    else
+		highlightRightButton = false;
+
+	    if (pos.x >= 330 && pos.x < 360 && pos.y >= 80 && pos.y < 110 && helpScreen == true && showAbout == false && showRank == false)
+		highlightLeftButton = true;
+	    else
+		highlightLeftButton = false;
+
+	    if (pos.x >= 400 && pos.x < 450 && pos.y >= 80 && pos.y < 110 && (helpScreen == true || showAbout == true) && showRank == false)
+		highlightHelpExit = true;
+	    else
+		highlightHelpExit = false;
+
+	    // Makes the cursor into a hand
+	    if (highlightNewGame || highlightHelp || highlightRank || highlightAbout || highlightExit || highlightSound ||
+		    highlightRightButton || highlightLeftButton || highlightHelpExit)
+		setCursor (Cursor.getPredefinedCursor (Cursor.HAND_CURSOR)); // change mouse cursor to a hand
+	    else
+		setCursor (Cursor.getDefaultCursor ());  // change mouse cursor to its normal image
+
+
+
+	    repaint (); //Repaint the screen to show any changes
+	}
+    }
+
+
+    // Keyboard events you can listen for since this JPanel is a KeyListener
+
+    /** Responds to a keyPressed event
+    * @param event information about the key pressed event
+    */
+    public void keyPressed (KeyEvent event)
+    {
+	// Change the currentRow and currentColumn of the player
+	// based on the key pressed
+	if (event.getKeyCode () == KeyEvent.VK_LEFT)
+	{
+	    if (currentColumn > 1)
+		currentColumn--;
+	}
+
+
+	else if (event.getKeyCode () == KeyEvent.VK_RIGHT)
+	{
+	    if (currentColumn < NO_OF_COLUMNS)
+		currentColumn++;
+	}
+
+
+	// These keys indicate player's move
+	else if (event.getKeyCode () == KeyEvent.VK_DOWN
+		|| event.getKeyCode () == KeyEvent.VK_ENTER
+		|| event.getKeyCode () == KeyEvent.VK_SPACE)
+	{
+	    makeMove (currentColumn);
+	}
+
+
+	// Repaint the screen after the change
+	repaint ();
+    }
+
+
+    // Extra methods needed since this game board is a KeyListener
+    public void keyReleased (KeyEvent event)
+    {
+    }
+
+
+    public void keyTyped (KeyEvent event)
+    {
+    }
+
+
+    /** Background sound for the game
+      */
+    public void playSound ()
+    {
+	if (soundOn)
+	    audio.backgroundMusic ();
+    }
+
+
+    /** Sorts through the highest scores and decides if the player ranks in the top five
+      * @param highestScores the highest scores entered thus far
+      * @param highestNames the name of the highest scoring players
+      * @return the index of the current score; if the current score is not in the top five
+      *         return -1
+      */
+    public int highestScore (int[] highestScores, String[] highestNames)
+    {
+	// Checks where the current score should be placed
+	int scoreIndex = -1;
+	int highScore = 0;
+	while (highScore < highestScores.length)
+	{
+	    if (score > highestScores [highScore])
+	    {
+		scoreIndex = highScore;
+	    }
+	    highScore++;
+	}
+
+	// Bumps out the top scores that placed lower than the current score
+	if (scoreIndex != -1)
+	{
+	    for (int topScore = highestScores.length - 1 ; topScore > scoreIndex ; topScore--)
+	    {
+		highestScores [topScore] = highestScores [topScore - 1];
+		highestNames [topScore] = highestNames [topScore - 1];
+	    }
+	    if (scoreIndex == 0)
+	    {
+		highestScores [0] = score;
+		highestNames [0] = "RANDOM PERSON"; // Figure out how to do a c.readLine in the game!!!!!
+	    }
+	}
+
+	// // Inputs the scores into a file
+	// for (int topScore = 0 ; topScore < highestScores.length ; topScore++)
+	// {
+	//     TextOutputFile highScores = new TextOutputFile ("HighScores.txt");
+	//     highScores.print (highestNames [topScore] + " ");
+	//     highScores.println (highestScores [topScore]);
+	//}
+
+	return scoreIndex;
+    }
+
+
+    // Mouse events you can listen for since this JPanel is a MouseListener
+
+    /** Responds to a mousePressed event
+    *@parameventinformation about the mouse pressed event
+    */
+    public void mousePressed (MouseEvent event)
+    {
+	if (helpScreen == false && showAbout == false)
+	{
+	    // Calculate which column was clicked, then make
+	    // the player's move for that column
+	    int selectedColumn = event.getX () / SQUARE_SIZE + 1;
+	    if (selectedColumn <= NO_OF_COLUMNS)
+		makeMove (selectedColumn);
+	    else
+	    {
+		Point pressed = event.getPoint ();
+		//Check if mouse was pressed over the Exit image
+		if (pressed.x >= 480 && pressed.x < 630 && pressed.y >= 340 && pressed.y < 370)
+		{
+		    System.exit (0);
+		}
+
+		// Check if mouse was pressed over the NewGame image
+		if (pressed.x >= 480 && pressed.x < 630 && pressed.y >= 120 && pressed.y < 160)
+		{
+		    if (gameStatus == 1)
+		    {
+			newGame ();
+			gameStatus = 2;
+			repaint ();
+			return;
+		    }
+		    newGame ();
+		}
+
+		// Check if mouse was pressed over the Rank image
+		if (pressed.x >= 480 && pressed.x < 630 && pressed.y >= 230 && pressed.y < 270)
+		{
+		    showRank = true;
+		    paintImmediately (0, 0, getWidth (), getHeight ());
+		    // delay (5000);
+		}
+
+		//Check if mouse was pressed over the About image
+		if (pressed.x >= 480 && pressed.x < 630 && pressed.y >= 285 && pressed.y < 325)
+		{
+		    showAbout = true;
+		}
+
+		// Check if mouse was pressed over the Help image
+		if (pressed.x >= 480 && pressed.x < 630 && pressed.y >= 175 && pressed.y < 215)
+		{
+		    helpScreen = true;
+		    currentPage = 1;
+		}
+
+		// Check if mouse was pressed over the audio image
+		if (pressed.x >= 485 && pressed.x < 520 && pressed.y >= 450 && pressed.y < 490)
+		{
+		    if (soundOn)
+		    {
+			soundOn = false;
+			audio.stopSound ();
+		    }
+		    else
+		    {
+			soundOn = true;
+			if (soundOn)
+			    playSound ();
+		    }
+		}
+	    }
+	}
+	// checks for buttons pressed in the help screen
+	else
+	{
+	    Point pressed = event.getPoint ();
+
+	    // If mouse was pressed over the right arrow
+	    if (pressed.x >= 490 && pressed.x < 520 && pressed.y >= 80 && pressed.y < 110 && helpScreen == true && showAbout == false && showRank == false)
+	    {
+		if (currentPage >= 1 && currentPage < (helpInstructionImages.length - 1))
+		{
+		    currentPage++;
+		    repaint ();
+		}
+	    }
+
+	    // If mouse was pressed over the left arrow
+	    if (pressed.x >= 330 && pressed.x < 360 && pressed.y >= 80 && pressed.y < 110 && helpScreen == true && showAbout == false && showRank == false)
+	    {
+		if (currentPage > 1 && currentPage <= (helpInstructionImages.length - 1))
+		{
+		    currentPage--;
+		    repaint ();
+		}
+	    }
+
+	    // If mouse pressed over the exit sign
+	    if (pressed.x >= 400 && pressed.x < 450 && pressed.y >= 80 && pressed.y < 110 && helpScreen == true && showAbout == false && showRank == false)
+		helpScreen = false;
+
+	    if (pressed.x >= 400 && pressed.x < 450 && pressed.y >= 80 && pressed.y < 110 && (helpScreen == true || showAbout == true) && showRank == false)
+		showAbout = false;
+	}
+
+
+
+	repaint ();
+    }
+
+
+
+    // Extra methods needed since this game board is a MouseListener
+
+    public void mouseReleased (MouseEvent event)
+    {
+    }
+
+
+    public void mouseClicked (MouseEvent event)
+    {
+    }
+
+
+    public void mouseEntered (MouseEvent event)
+    {
+    }
+
+
+    public void mouseExited (MouseEvent event)
+    {
+    }
+}
+
+
